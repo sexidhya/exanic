@@ -641,25 +641,6 @@ async def _upsert_user(db, uid: int | None, uname: str | None) -> None:
             upsert=True,
         )
 
-@client.on(events.NewMessage(pattern=r"^/info$"))
-async def info_cmd(event):
-    try:
-        sender = await event.get_sender()
-        uid = getattr(sender, "id", None)
-
-        # handle classic + collectible usernames
-        uname_bare = _extract_username_from_sender(sender)  # no "@"
-        await _upsert_user(db, uid, uname_bare)
-
-        display_uname = f"@{uname_bare}" if uname_bare else None
-        text = await build_info_card(db, user_id=uid, username=display_uname)
-        await event.respond(text)
-    except Exception as e:
-        # minimal debug so "normal users" still see something if it fails
-        await event.respond("❌ Could not build info right now.")
-        # optional: print to server logs
-        print("[/info error]", repr(e))
-
 
 # --------- /stats (owner)
 @client.on(events.NewMessage(pattern=r"^/stats$"))
