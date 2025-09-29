@@ -1,0 +1,74 @@
+import random, string
+from datetime import datetime
+from typing import Dict, Tuple
+
+# Telethon imports
+from telethon.tl.functions.users import GetFullUserRequest
+
+# Assume these come from your db module
+from db import COL_DEALS, COL_USERS
+
+def _new_deal_id() -> str:
+    return "DL-" + "".join(random.choices(string.ascii_uppercase + string.digits, k=6))
+
+# Assume you defined these elsewhere
+# from deal_logic import _new_deal_id, _user_has_exanic_in_bio
+
+
+async def compute_fee(client, buyer_username: str, seller_username: str) -> float:
+    b = await _user_has_exanic_in_bio(client, buyer_username)
+    s = await _user_has_exanic_in_bio(client, seller_username)
+    return 1.0 if (b and s) else 2.0
+
+
+async def create_deal_from_form(
+    client,
+    form_message,
+    escrower_id: int,
+    escrower_name: str,
+    buyer_username: str,
+    seller_username: str,
+    main_amount: float
+) -> Dict:
+    fee = await compute_fee(client, buyer_username, seller_username)
+    total = float(main_amount) + fee
+    deal = {
+        "deal_id": _new_deal_id(),
+        "escrower_id": escrower_id,
+        "escrower_name": escrower_name,
+        "buyer_username": buyer_username.lower(),
+        "seller_username": seller_username.lower(),
+        "amount": float(total),  # amount displayed in card (main + fee)
+        "main_amount": float(main_amount),
+        "fee": float(fee),
+        "remaining": float(main_amount),  # remaining hold (cuts reduce this)
+        "status": "active",
+        "created_at": datetime.utcnow(),
+        "form_chat_id": getattr(form_message.chat, "id", None),
+        "form_message_id": form_message.id,
+    }
+    await COL_DEALS.insert_one(deal)
+    # ensure users exist
+    if buyer_username:
+        await COL_USERS.update_one(
+            {"username": buyer_username.lower()},
+            {"$setOnInsert": {"created_at": datetime.utcnow()}},
+            upsert=True,
+        )
+    if seller_username:
+        await COL_USERS.update_one(
+            {"username": seller_username.lower()},
+            {"$setOnInsert": {"created_at": datetime.utcnow()}},
+            upsert=True,
+        )
+    return deal
+
+
+async def recalc_amount_fields(deal: Dict) -> Tuple[float, float, float]:
+    """Return (amount_display, remaining, release) based on main, fee, cuts."""
+    main = float(deal.get("main_amount", 0.0))
+    fee = float(deal.get("fee", 0.0))
+    remaining = float(deal.get("remaining", 0.0))
+    amount_display = main + fee
+    release = max(0.0, remaining - fee)
+    return round(amount_display, 2), round(remaining, 2), round(release, 2)

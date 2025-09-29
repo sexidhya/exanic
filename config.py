@@ -1,0 +1,14 @@
+import os
+
+
+API_ID = 2852262
+API_HASH = "968e06560801f5f264fe33d700329ddd"
+BOT_TOKEN = "8498830895:AAFo0yeiQ0PoRYwrecW0CZgsNwmcV0MOcrY"
+MONGO_URI = "mongodb+srv://exanic:exanic@cluster0.v2sz6yh.mongodb.net"
+DB_NAME = "ExanicNew"
+OWNER_ID = 8145806296
+ESCROW_GROUP_IDS = {"-1002248727398": True , "-1002676048878": True , "-4885554031":True}
+LOG_CHANNEL_ID = -1003131289956
+
+
+FOOTER_INFO_DATE = "💡 Data Recorded from 30/08/2025 20:00 IST"
