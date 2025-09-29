@@ -510,26 +510,23 @@ async def close_cmd(event):
     )
 
     # ---- LOGGING PART ----
+    def escape_md(text: str) -> str:
+        escape_chars = r"\_*[]()~`>#+-=|{}.!"
+        return "".join(f"\\{c}" if c in escape_chars else c for c in str(text))
+
     total, count, _ = await global_stats(db)   # total worth & escrows
     log_text = (
-       from telethon.utils import escape_md
+    f"✅Escrow Deal-Done!\n\n"
+    f"ID - {deal_id}\n"
+    f"Buyer - {buyer}\n"
+    f"Seller - {seller}\n"
+    f"Amount - {release_amount:.2f}$\n"
+    f"Total Worth: {total:.2f}$\n"
+    f"Total Escrows: {count}\n\n"
+    f"By @Exanic"
+)
 
-log_text = (
-    f"**✅ Escrow Deal-Done!**\n\n"
-    f"**ID** - `{deal_id}`\n"
-    f"**Escrower** - {escape_md(str(escrower))}\n"
-    f"**Buyer** - {escape_md(str(buyer))}\n"
-    f"**Seller** - {escape_md(str(seller))}\n"
-    f"**Amount** - {release_amount:.2f}\\$\n"
-    f"**Total Worth:** {total:.2f}\\$\n"
-    f"**Total Escrows:** {count}\n\n"
-    f"**By @Exanic**"
-))
-
-    try:
-        await client.send_message(LOG_CHANNEL_ID, log_text , parse_mode="md")
-    except Exception as e:
-        print("[LOGGING ERROR]", e)
+    await client.send_message(LOG_CHANNEL_ID, log_text, parse_mode=None)
 
 # --------- /shift (admins/owner), reply to NEW form
 
