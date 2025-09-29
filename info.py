@@ -37,7 +37,7 @@ async def _user_deal_stats(db: AsyncIOMotorDatabase, uname: str) -> Dict[str, An
         "count": int(d.get("count", 0)),
         "total_volume": float(d.get("total_volume", 0.0)),
     }
-
+FOOTER_INFO_DATE1 = "💡 Data Recorded from 29/09/2025 20:00 IST"
 
 async def build_info_card(
     db: AsyncIOMotorDatabase,
@@ -90,6 +90,6 @@ async def build_info_card(
         f"Escrowed Amount: {amount_str}",
         f"Rank: {rank_str}",
         "",
-        FOOTER_INFO_DATE,
+        FOOTER_INFO_DATE1,
     ]
     return "\n".join(lines)

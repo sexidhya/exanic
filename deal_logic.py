@@ -5,6 +5,9 @@ from typing import Dict, Tuple
 # Telethon imports
 from telethon.tl.functions.users import GetFullUserRequest
 
+import re
+import unicodedata
+
 # Assume these come from your db module
 from db import COL_DEALS, COL_USERS
 
@@ -19,23 +22,50 @@ def _normalize_handle(u: str | None) -> str | None:
         return None
     return u.strip().lstrip("@").lower()
 
+
+# Match @exanic as a standalone token (case-insensitive).
+# Allows optional '@' and word boundaries so 'mexanicon' won't match.
+_EXANIC_TOKEN = re.compile(r'(?<![A-Za-z0-9_])@?exanic(?![A-Za-z0-9_])', re.IGNORECASE)
+
+# Zero-width + BOM chars that can break matching when users copy/paste
+_ZW_CHARS = "".join([
+    "\u200B",  # ZERO WIDTH SPACE
+    "\u200C",  # ZERO WIDTH NON-JOINER
+    "\u200D",  # ZERO WIDTH JOINER
+    "\u2060",  # WORD JOINER
+    "\uFEFF",  # ZERO WIDTH NO-BREAK SPACE (BOM)
+])
+
+def _normalize_handle(u: str | None) -> str | None:
+    if not u:
+        return None
+    return u.strip().lstrip("@").lower()
+
+def _clean_text(s: str | None) -> str:
+    if not s:
+        return ""
+    # Normalize unicode and strip zero-width characters
+    s = unicodedata.normalize("NFKC", s)
+    return s.translate({ord(c): None for c in _ZW_CHARS})
+
 async def _user_has_exanic_in_bio(client, username: str | None) -> bool:
     """
-    Returns True if the user's bio contains 'exanic' (case-insensitive).
-    Handles '@' prefix, whitespace, and missing bios safely.
+    True iff the user's BIO contains '@exanic' (case-insensitive).
+    Robust to '@' missing, zero-width chars, unicode normalization.
     """
     handle = _normalize_handle(username)
     if not handle:
         return False
     try:
-        # Resolve to an entity first; more forgiving than passing raw strings to the request
         entity = await client.get_entity(handle)
         full = await client(GetFullUserRequest(entity))
-        about = (getattr(full, "full_user", None) and full.full_user.about) or ""
-        return "exanic" in about.lower()
+        about = getattr(getattr(full, "full_user", None), "about", "") or ""
+        about = _clean_text(about)
+        return bool(_EXANIC_TOKEN.search(about))
     except Exception:
-        # Could be: username not found, privacy-restricted, temporary fetch error, etc.
+        # Username not found / privacy / transient error → treat as no badge
         return False
+
 
 
 
