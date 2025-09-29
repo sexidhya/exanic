@@ -1,0 +1,3645 @@
+[{
+  "_id": {
+    "$oid": "68b1722761e09a5ff584b0f6"
+  },
+  "user_id": 2044311308,
+  "amount": 603.6600000000001,
+  "count": 3,
+  "name": "Reeshu"
+},
+{
+  "_id": {
+    "$oid": "68b3006e129af47a66f8b1e9"
+  },
+  "user_id": {
+    "$numberLong": "8145806296"
+  },
+  "amount": 266.66,
+  "count": 2,
+  "name": "san"
+},
+{
+  "_id": {
+    "$oid": "68b30337129af47a66f8b1f2"
+  },
+  "user_id": {
+    "$numberLong": "5376344211"
+  },
+  "amount": 223.98,
+  "count": 2,
+  "name": "♾️",
+  "username": null
+},
+{
+  "_id": {
+    "$oid": "68b31011129af47a66f8b287"
+  },
+  "user_id": {
+    "$numberLong": "7973369351"
+  },
+  "amount": 1332.19,
+  "count": 2,
+  "name": "$",
+  "username": "ringhist"
+},
+{
+  "_id": {
+    "$oid": "68b31374129af47a66f8b29d"
+  },
+  "user_id": {
+    "$numberLong": "7683712115"
+  },
+  "amount": 0,
+  "count": 1,
+  "name": "India",
+  "username": "AltAccUcr"
+},
+{
+  "_id": {
+    "$oid": "68b3151d129af47a66f8b2a5"
+  },
+  "user_id": {
+    "$numberLong": "7974346238"
+  },
+  "amount": 41009.05,
+  "count": 24,
+  "name": "BLONDE",
+  "username": "Sankiihu1"
+},
+{
+  "_id": {
+    "$oid": "68b3151d129af47a66f8b2a6"
+  },
+  "user_id": 1841411215,
+  "amount": 11114.61,
+  "count": 11,
+  "name": "Sellerop🇮🇳 FW available",
+  "username": "sellerophere"
+},
+{
+  "_id": {
+    "$oid": "68b31d6b129af47a66f8b2e8"
+  },
+  "user_id": {
+    "$numberLong": "5355350595"
+  },
+  "amount": 7034.6,
+  "count": 15,
+  "name": "K A A L",
+  "username": "Kaalhuu"
+},
+{
+  "_id": {
+    "$oid": "68b31daf129af47a66f8b2ea"
+  },
+  "user_id": 972769146,
+  "amount": 39207.3,
+  "count": 65,
+  "name": "AMIT KUMAR",
+  "username": "AMITSAH2455"
+},
+{
+  "_id": {
+    "$oid": "68b31daf129af47a66f8b2eb"
+  },
+  "user_id": {
+    "$numberLong": "7634233300"
+  },
+  "amount": 1748.6,
+  "count": 4,
+  "name": "Ninja",
+  "username": "Hudoninja"
+},
+{
+  "_id": {
+    "$oid": "68b31f93129af47a66f8b2f6"
+  },
+  "user_id": 1687253730,
+  "amount": 2209.1,
+  "count": 5,
+  "name": "Chitransh",
+  "username": "Chitransh_07"
+},
+{
+  "_id": {
+    "$oid": "68b3249a129af47a66f8b318"
+  },
+  "user_id": 1943793362,
+  "amount": 5095.57,
+  "count": 7,
+  "name": "VIP💎 (Buying USDT 90/$ Only CDM)",
+  "username": "Beastopt"
+},
+{
+  "_id": {
+    "$oid": "68b32739129af47a66f8b32a"
+  },
+  "user_id": {
+    "$numberLong": "7442103328"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Guess"
+},
+{
+  "_id": {
+    "$oid": "68b3287d129af47a66f8b330"
+  },
+  "user_id": {
+    "$numberLong": "6711286806"
+  },
+  "amount": 781,
+  "count": 4,
+  "name": "MARCUS @TReatsAi2Bot 🀄",
+  "username": "Marcus_mm1"
+},
+{
+  "_id": {
+    "$oid": "68b32926129af47a66f8b33b"
+  },
+  "user_id": {
+    "$numberLong": "8153276416"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "pooor"
+},
+{
+  "_id": {
+    "$oid": "68b32b4c129af47a66f8b349"
+  },
+  "user_id": 1869329043,
+  "amount": 17004.45,
+  "count": 34,
+  "name": "Ranveer",
+  "username": "RanveerTg28"
+},
+{
+  "_id": {
+    "$oid": "68b32bcb129af47a66f8b34f"
+  },
+  "user_id": 1365260764,
+  "amount": 3214,
+  "count": 5,
+  "name": "Aston",
+  "username": "rock_rebel_h"
+},
+{
+  "_id": {
+    "$oid": "68b32d0f129af47a66f8b359"
+  },
+  "user_id": 1262019966,
+  "amount": 0,
+  "count": 0,
+  "name": "ℂ𝕒𝕡𝕥𝕒𝕚𝕟 𝕁𝕒𝕔𝕜 𝕊𝕡. 𓅩"
+},
+{
+  "_id": {
+    "$oid": "68b33385129af47a66f8b378"
+  },
+  "user_id": {
+    "$numberLong": "6207830745"
+  },
+  "amount": 567,
+  "count": 1,
+  "name": "ᖇᗩᘿ",
+  "username": null
+},
+{
+  "_id": {
+    "$oid": "68b333d3129af47a66f8b379"
+  },
+  "user_id": {
+    "$numberLong": "7806172913"
+  },
+  "amount": 3877.58,
+  "count": 17,
+  "name": "ᴅᴇᴀᴅᴘᴏᴏʟ",
+  "username": "poolxdd"
+},
+{
+  "_id": {
+    "$oid": "68b333d9129af47a66f8b37a"
+  },
+  "user_id": {
+    "$numberLong": "7775874259"
+  },
+  "amount": 9241.7,
+  "count": 10,
+  "name": "STFU",
+  "username": "Forlimitedchats"
+},
+{
+  "_id": {
+    "$oid": "68b33dc7129af47a66f8b3a5"
+  },
+  "user_id": {
+    "$numberLong": "7630752481"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "CHUTIYA HU BHAI"
+},
+{
+  "_id": {
+    "$oid": "68b359e7129af47a66f8b3f6"
+  },
+  "user_id": {
+    "$numberLong": "6553904423"
+  },
+  "amount": 458.9,
+  "count": 2,
+  "name": "Luffy",
+  "username": "Naughtyishere0"
+},
+{
+  "_id": {
+    "$oid": "68b35d78129af47a66f8b3fe"
+  },
+  "user_id": 1852598413,
+  "amount": 0,
+  "count": 0,
+  "name": "Vipul"
+},
+{
+  "_id": {
+    "$oid": "68b35f67129af47a66f8b3ff"
+  },
+  "user_id": {
+    "$numberLong": "6317071455"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "ㅤKaran",
+  "username": "TheKaran99"
+},
+{
+  "_id": {
+    "$oid": "68b35f71129af47a66f8b400"
+  },
+  "user_id": {
+    "$numberLong": "7780903200"
+  },
+  "amount": 13838.2,
+  "count": 18,
+  "name": "ᴇCᴏ",
+  "username": null
+},
+{
+  "_id": {
+    "$oid": "68b36cb1129af47a66f8b424"
+  },
+  "user_id": {
+    "$numberLong": "7556326692"
+  },
+  "amount": 2587,
+  "count": 2,
+  "name": "Mohit { Buying Usdt $ }",
+  "username": "Assambanks"
+},
+{
+  "_id": {
+    "$oid": "68b36cd6129af47a66f8b425"
+  },
+  "user_id": {
+    "$numberLong": "7861460123"
+  },
+  "amount": 21903.5,
+  "count": 19,
+  "name": "Red",
+  "username": "redd_tornado"
+},
+{
+  "_id": {
+    "$oid": "68b36f90129af47a66f8b427"
+  },
+  "user_id": {
+    "$numberLong": "8263540293"
+  },
+  "amount": 700,
+  "count": 1,
+  "name": "- maybe 7",
+  "username": "SvnOnly"
+},
+{
+  "_id": {
+    "$oid": "68b3a9b5129af47a66f8b48a"
+  },
+  "user_id": {
+    "$numberLong": "7637467157"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "𝐔𝐓𝐇 𝐆𝐘𝐀 ( 𝐃𝐨𝐧'𝐭 𝐌𝐞𝐬𝐬𝐚𝐠𝐞)"
+},
+{
+  "_id": {
+    "$oid": "68b3afb2129af47a66f8b48e"
+  },
+  "user_id": {
+    "$numberLong": "8288831362"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Aremonus"
+},
+{
+  "_id": {
+    "$oid": "68b3b36c129af47a66f8b495"
+  },
+  "user_id": {
+    "$numberLong": "6525772676"
+  },
+  "amount": 500,
+  "count": 1,
+  "name": "Hustler",
+  "username": "HustlerKings"
+},
+{
+  "_id": {
+    "$oid": "68b3b46c129af47a66f8b496"
+  },
+  "user_id": 1181404383,
+  "amount": 69468.03,
+  "count": 95,
+  "name": "𝓓𝓪𝓷𝓬𝓮𝓻𝓼𝓸",
+  "username": "chintanayaiai"
+},
+{
+  "_id": {
+    "$oid": "68b3bc4c129af47a66f8b4a7"
+  },
+  "user_id": {
+    "$numberLong": "5589746620"
+  },
+  "amount": 2684.09,
+  "count": 8,
+  "name": "𝙓𝙔𝙕 (𝙏𝙃𝙀 𝙐𝙎𝘿𝙏 𝘽𝙐𝙔𝙀𝙍)",
+  "username": "Maturedxguy"
+},
+{
+  "_id": {
+    "$oid": "68b3c67b129af47a66f8b4cd"
+  },
+  "user_id": 2106047741,
+  "amount": 8124.85,
+  "count": 14,
+  "name": "MaHaKal",
+  "username": "MaHaKaL0o7"
+},
+{
+  "_id": {
+    "$oid": "68b3d824129af47a66f8b50e"
+  },
+  "user_id": {
+    "$numberLong": "7526071546"
+  },
+  "amount": 448.3,
+  "count": 0,
+  "name": "PRATYUSH"
+},
+{
+  "_id": {
+    "$oid": "68b3dffd129af47a66f8b52c"
+  },
+  "user_id": {
+    "$numberLong": "6373623165"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Daniel"
+},
+{
+  "_id": {
+    "$oid": "68b3e08d129af47a66f8b52d"
+  },
+  "user_id": {
+    "$numberLong": "7233304767"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Defylaw 💤"
+},
+{
+  "_id": {
+    "$oid": "68b3eff7129af47a66f8b596"
+  },
+  "user_id": 1028614838,
+  "amount": 2393.52,
+  "count": 3,
+  "name": "Vishwa",
+  "username": "vishwajax"
+},
+{
+  "_id": {
+    "$oid": "68b3f04c129af47a66f8b598"
+  },
+  "user_id": {
+    "$numberLong": "5345871838"
+  },
+  "amount": 12710.56,
+  "count": 16,
+  "name": "Paratox",
+  "username": "Paratox_01"
+},
+{
+  "_id": {
+    "$oid": "68b3f04c129af47a66f8b599"
+  },
+  "user_id": {
+    "$numberLong": "7491325123"
+  },
+  "amount": 2173,
+  "count": 1,
+  "name": "Рома"
+},
+{
+  "_id": {
+    "$oid": "68b3fd5f129af47a66f8b5df"
+  },
+  "user_id": 1865624337,
+  "amount": 22056.71,
+  "count": 16,
+  "name": "PRINCE",
+  "username": "Prince_rt9"
+},
+{
+  "_id": {
+    "$oid": "68b3fd5f129af47a66f8b5e0"
+  },
+  "user_id": {
+    "$numberLong": "6778999511"
+  },
+  "amount": 7192.8099999999995,
+  "count": 18,
+  "name": "Anshu",
+  "username": "ANSHU1812"
+},
+{
+  "_id": {
+    "$oid": "68b3ffa5129af47a66f8b60e"
+  },
+  "user_id": {
+    "$numberLong": "5620862048"
+  },
+  "amount": 1402,
+  "count": 1,
+  "name": "Kishan",
+  "username": "puneetsuperstarrrrr"
+},
+{
+  "_id": {
+    "$oid": "68b3ffa5129af47a66f8b60f"
+  },
+  "user_id": 1319924626,
+  "amount": 7602.75,
+  "count": 17,
+  "name": "Mahesh",
+  "username": "yourss_mahesh"
+},
+{
+  "_id": {
+    "$oid": "68b4066c129af47a66f8b63d"
+  },
+  "user_id": {
+    "$numberLong": "7727059592"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "⏤͟͟͞͞⋆𝐄𝐙 - 𝐌𝐈𝐂𝐊𝐄𝐘 ™ 💗"
+},
+{
+  "_id": {
+    "$oid": "68b40766129af47a66f8b643"
+  },
+  "user_id": {
+    "$numberLong": "6182493742"
+  },
+  "amount": 17258.93,
+  "count": 25,
+  "name": "Don",
+  "username": "don_op1"
+},
+{
+  "_id": {
+    "$oid": "68b413e8129af47a66f8b674"
+  },
+  "user_id": {
+    "$numberLong": "6426715166"
+  },
+  "amount": 1797.3899999999999,
+  "count": 3,
+  "name": "m𝖾𝗇𝗍𝖾𝖽 •",
+  "username": null
+},
+{
+  "_id": {
+    "$oid": "68b41ed4129af47a66f8b6a5"
+  },
+  "user_id": {
+    "$numberLong": "8235506331"
+  },
+  "amount": 5330.79,
+  "count": 8,
+  "name": "❤‍🔥 ᴢʜɪɢʜ </>",
+  "username": null
+},
+{
+  "_id": {
+    "$oid": "68b43828129af47a66f8b74c"
+  },
+  "user_id": {
+    "$numberLong": "8135826959"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "⏤͟͞YASH OP✨️"
+},
+{
+  "_id": {
+    "$oid": "68b44013129af47a66f8b769"
+  },
+  "user_id": 1585437569,
+  "amount": 1349,
+  "count": 1,
+  "name": "ravi",
+  "username": "Ravi245631"
+},
+{
+  "_id": {
+    "$oid": "68b44b39129af47a66f8b7a5"
+  },
+  "user_id": {
+    "$numberLong": "8124504793"
+  },
+  "amount": 5361.15,
+  "count": 16,
+  "name": "LALU",
+  "username": "Lalu2455"
+},
+{
+  "_id": {
+    "$oid": "68b44b39129af47a66f8b7a6"
+  },
+  "user_id": {
+    "$numberLong": "5262282031"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "strawHats Manager"
+},
+{
+  "_id": {
+    "$oid": "68b44cc1129af47a66f8b7ab"
+  },
+  "user_id": 93266808,
+  "amount": 0,
+  "count": 0,
+  "name": "I'm sti ✌️",
+  "username": "stigaming"
+},
+{
+  "_id": {
+    "$oid": "68b44cd5129af47a66f8b7ac"
+  },
+  "user_id": {
+    "$numberLong": "7959072224"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Dragan"
+},
+{
+  "_id": {
+    "$oid": "68b45ca9129af47a66f8b7f8"
+  },
+  "user_id": 827021624,
+  "amount": 3591.95,
+  "count": 7,
+  "name": "𝕺𝖒𝖕𝖗𝖆𝖐𝖆𝖘𝖍",
+  "username": null
+},
+{
+  "_id": {
+    "$oid": "68b46415129af47a66f8b828"
+  },
+  "user_id": {
+    "$numberLong": "7751553338"
+  },
+  "amount": 915,
+  "count": 1,
+  "name": "Manjeet",
+  "username": "manjeet12122"
+},
+{
+  "_id": {
+    "$oid": "68b467fa129af47a66f8b83a"
+  },
+  "user_id": {
+    "$numberLong": "5424809857"
+  },
+  "amount": 1300,
+  "count": 1,
+  "name": "𝗨ᴊᴊᴡᴀʟ हिंदू 乛",
+  "username": null
+},
+{
+  "_id": {
+    "$oid": "68b467fa129af47a66f8b83b"
+  },
+  "user_id": {
+    "$numberLong": "7623994305"
+  },
+  "amount": 1000,
+  "count": 0,
+  "name": "ᗩᗷᏞㅤ"
+},
+{
+  "_id": {
+    "$oid": "68b46935129af47a66f8b840"
+  },
+  "user_id": {
+    "$numberLong": "5478344051"
+  },
+  "amount": 6197.8,
+  "count": 18,
+  "name": "Pro",
+  "username": "Pro_deadbeat"
+},
+{
+  "_id": {
+    "$oid": "68b54656129af47a66f8bc9c"
+  },
+  "user_id": {
+    "$numberLong": "6562399308"
+  },
+  "amount": 3384.55,
+  "count": 4,
+  "name": "ɴᴀᴠɴɪᴇᴛ ꜱᴇᴋᴇʀᴀ",
+  "username": "NavnietHuVai"
+},
+{
+  "_id": {
+    "$oid": "68b54656129af47a66f8bc9d"
+  },
+  "user_id": 782102441,
+  "amount": 3384.55,
+  "count": 4,
+  "name": "ˢˢ 𝐔𝐒𝐀𝐄 𝐒𝐀𝐇𝐈𝐋",
+  "username": "ignparaboy"
+},
+{
+  "_id": {
+    "$oid": "68b54788129af47a66f8bca7"
+  },
+  "user_id": {
+    "$numberLong": "7347482447"
+  },
+  "amount": 10829.5,
+  "count": 19,
+  "name": "Hom",
+  "username": "spiderhui"
+},
+{
+  "_id": {
+    "$oid": "68b54788129af47a66f8bca8"
+  },
+  "user_id": {
+    "$numberLong": "6691651672"
+  },
+  "amount": 4265.110000000001,
+  "count": 10,
+  "name": "R A V A N",
+  "username": "iMRavanYT"
+},
+{
+  "_id": {
+    "$oid": "68b54aef129af47a66f8bcb1"
+  },
+  "user_id": {
+    "$numberLong": "5177071410"
+  },
+  "amount": 1501,
+  "count": 6,
+  "name": "Human",
+  "username": "Human1899"
+},
+{
+  "_id": {
+    "$oid": "68b558de129af47a66f8bce2"
+  },
+  "user_id": 783827333,
+  "amount": 1231.75,
+  "count": 5,
+  "name": "kash",
+  "username": "kash29"
+},
+{
+  "_id": {
+    "$oid": "68b562c5129af47a66f8bd13"
+  },
+  "user_id": 1037907193,
+  "amount": 11783.72,
+  "count": 23,
+  "name": "Zoro",
+  "username": "wholetthedoggout"
+},
+{
+  "_id": {
+    "$oid": "68b562c5129af47a66f8bd14"
+  },
+  "user_id": {
+    "$numberLong": "7716074508"
+  },
+  "amount": 2109,
+  "count": 2,
+  "name": "๛S A N K E T 🀄️",
+  "username": "SanketHuVai"
+},
+{
+  "_id": {
+    "$oid": "68b56940129af47a66f8bd87"
+  },
+  "user_id": 1324882737,
+  "amount": 10102,
+  "count": 5,
+  "name": "MR.CHIEFoP🦅",
+  "username": "MRCHIEFOP"
+},
+{
+  "_id": {
+    "$oid": "68b569cd129af47a66f8bd8b"
+  },
+  "user_id": {
+    "$numberLong": "8376936213"
+  },
+  "amount": 755.2,
+  "count": 4,
+  "name": "Mufasa",
+  "username": "Mufasa47"
+},
+{
+  "_id": {
+    "$oid": "68b56a59129af47a66f8bd8f"
+  },
+  "user_id": 1929333228,
+  "amount": 6468.73,
+  "count": 13,
+  "name": "[🇮🇳] 𝕽𝖔𝖍𝖎𝖙",
+  "username": "Rohit_Xy"
+},
+{
+  "_id": {
+    "$oid": "68b56c14129af47a66f8bda0"
+  },
+  "user_id": {
+    "$numberLong": "7304805554"
+  },
+  "amount": 9373.23,
+  "count": 18,
+  "name": "Rahul",
+  "username": "rahul_0187"
+},
+{
+  "_id": {
+    "$oid": "68b56d0f129af47a66f8bda7"
+  },
+  "user_id": {
+    "$numberLong": "6830885171"
+  },
+  "amount": 40,
+  "count": 1,
+  "name": "aman",
+  "username": "Scarfacefs"
+},
+{
+  "_id": {
+    "$oid": "68b56d17129af47a66f8bda8"
+  },
+  "user_id": {
+    "$numberLong": "8221952102"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "ZENITH !!!"
+},
+{
+  "_id": {
+    "$oid": "68b57a5b129af47a66f8bddd"
+  },
+  "user_id": {
+    "$numberLong": "5075000706"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Kᴀʀsʜ ⚚"
+},
+{
+  "_id": {
+    "$oid": "68b57a98129af47a66f8bdde"
+  },
+  "user_id": {
+    "$numberLong": "8167497030"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Williams"
+},
+{
+  "_id": {
+    "$oid": "68b57c36129af47a66f8bde5"
+  },
+  "user_id": {
+    "$numberLong": "6639686782"
+  },
+  "amount": 586.89,
+  "count": 2,
+  "name": "Saurav",
+  "username": "sauravpandey"
+},
+{
+  "_id": {
+    "$oid": "68b57d0a129af47a66f8bde7"
+  },
+  "user_id": {
+    "$numberLong": "8358035643"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Obito kyc",
+  "username": "Obitokycexpert"
+},
+{
+  "_id": {
+    "$oid": "68b585024af3671a9f3ecf1a"
+  },
+  "user_id": {
+    "$numberLong": "6813011131"
+  },
+  "amount": 0,
+  "username": "Erecor",
+  "name": "𝔸𝕕𝕚𝕥𝕪𝕒",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b585dc712052a0e279f5fc"
+  },
+  "user_id": 1821530401,
+  "amount": 0,
+  "username": null,
+  "name": "V",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b5863d712052a0e279f5fe"
+  },
+  "user_id": {
+    "$numberLong": "5103205085"
+  },
+  "amount": 1580,
+  "username": "SuperFreaked",
+  "name": "Darkie",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68b58c25993ed94b46bc6632"
+  },
+  "user_id": {
+    "$numberLong": "5111050112"
+  },
+  "amount": 4484.1,
+  "username": "Iambatma",
+  "name": "Reacher",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68b59557f1bef7413c09fd3b"
+  },
+  "user_id": 1827296918,
+  "amount": 7702.7080000000005,
+  "username": "BigBullRakesh",
+  "name": "Rakesh",
+  "count": 13
+},
+{
+  "_id": {
+    "$oid": "68b5dfebf1bef7413c09fd3e"
+  },
+  "user_id": 2141096981,
+  "amount": 1315,
+  "username": "aintycz",
+  "name": "Ycz",
+  "count": 6
+},
+{
+  "_id": {
+    "$oid": "68b67459f1bef7413c09fd40"
+  },
+  "user_id": {
+    "$numberLong": "7269198002"
+  },
+  "amount": 20626.36,
+  "username": "Knight_Venom",
+  "name": "Knight",
+  "count": 35
+},
+{
+  "_id": {
+    "$oid": "68b68027f1bef7413c09fd43"
+  },
+  "user_id": {
+    "$numberLong": "5424225651"
+  },
+  "amount": 11427.7,
+  "username": "Gh8055",
+  "name": "ＧＨＯＳＴ ✨",
+  "count": 12
+},
+{
+  "_id": {
+    "$oid": "68b68027f1bef7413c09fd44"
+  },
+  "user_id": {
+    "$numberLong": "5235323650"
+  },
+  "amount": 820,
+  "username": "Ankush_69",
+  "name": "Ankush",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68b68425f1bef7413c09fd45"
+  },
+  "user_id": {
+    "$numberLong": "7284256897"
+  },
+  "amount": 2814.1400000000003,
+  "username": "trustrend",
+  "name": "JAMESGOD",
+  "count": 3
+},
+{
+  "_id": {
+    "$oid": "68b69d43f1bef7413c09fd4a"
+  },
+  "user_id": 821230225,
+  "amount": 2392.23,
+  "username": "Rudraj_OfficiaL",
+  "name": "[ 🆁🆄🅳🆁🅰🅹_🅾🅵🅵🅸🅲🅸🅰🅻 ]",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68b69ec9f1bef7413c09fd4b"
+  },
+  "user_id": 2102104194,
+  "amount": 19467.06,
+  "username": "P4P4SpiriT",
+  "name": "⏤͟͞SpiriT™ </>",
+  "count": 32
+},
+{
+  "_id": {
+    "$oid": "68b6b47ff1bef7413c09fd52"
+  },
+  "user_id": {
+    "$numberLong": "8087616962"
+  },
+  "amount": 3331,
+  "username": "Rajatsingh010",
+  "name": "𝓡𝓪𝓳𝓪𝓽 𝓼𝓲𝓷𝓰𝓱",
+  "count": 4
+},
+{
+  "_id": {
+    "$oid": "68b6c60bf1bef7413c09fd56"
+  },
+  "user_id": {
+    "$numberLong": "5338008010"
+  },
+  "amount": 40,
+  "username": "vortexoge",
+  "name": "vortex",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b6cb9cf1bef7413c09fd58"
+  },
+  "user_id": {
+    "$numberLong": "7237205822"
+  },
+  "amount": 5036,
+  "username": "phoenixftww",
+  "name": "🐦‍🔥",
+  "count": 8
+},
+{
+  "_id": {
+    "$oid": "68b6cd14f1bef7413c09fd59"
+  },
+  "user_id": {
+    "$numberLong": "8187098724"
+  },
+  "amount": 1594,
+  "username": "Cryptonoxx",
+  "name": "Back-up",
+  "count": 4
+},
+{
+  "_id": {
+    "$oid": "68b6cd14f1bef7413c09fd5a"
+  },
+  "user_id": {
+    "$numberLong": "8074707215"
+  },
+  "amount": 3895,
+  "username": "brottli",
+  "name": ".",
+  "count": 9
+},
+{
+  "_id": {
+    "$oid": "68b6cd83f1bef7413c09fd5b"
+  },
+  "user_id": {
+    "$numberLong": "7678505146"
+  },
+  "amount": 3091.75,
+  "username": "Sjsjsnnsnsnen",
+  "name": "Soul",
+  "count": 6
+},
+{
+  "_id": {
+    "$oid": "68b7024bfce15f1af384ad90"
+  },
+  "user_id": {
+    "$numberLong": "7885266347"
+  },
+  "amount": 2782.29,
+  "username": "HeyEGO",
+  "name": "𝙴𝙶𝙾",
+  "count": 6
+},
+{
+  "_id": {
+    "$oid": "68b7024bfce15f1af384ad91"
+  },
+  "user_id": {
+    "$numberLong": "6905423948"
+  },
+  "amount": 5688.7,
+  "username": "kolkatabank",
+  "name": "𝙍𝙖𝙩",
+  "count": 3
+},
+{
+  "_id": {
+    "$oid": "68b7248afce15f1af384ad93"
+  },
+  "user_id": {
+    "$numberLong": "7869303981"
+  },
+  "amount": 0,
+  "username": "Aremonus",
+  "name": "Aremonus",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b72de37c5cbc46c05132f8"
+  },
+  "user_id": 1241950025,
+  "amount": 0,
+  "username": "Blinderalt",
+  "name": "Peaky alt",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b73258b9037a9d1e2f9fa7"
+  },
+  "user_id": {
+    "$numberLong": "6616386939"
+  },
+  "amount": 809,
+  "username": "LegitNik",
+  "name": "Nik",
+  "count": 5
+},
+{
+  "_id": {
+    "$oid": "68b73b8fb9037a9d1e2f9fa8"
+  },
+  "user_id": 1561622308,
+  "amount": 0,
+  "username": "dhruvx211",
+  "name": "Dhruv",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b73d91b9037a9d1e2f9fa9"
+  },
+  "user_id": {
+    "$numberLong": "7763300114"
+  },
+  "amount": 1452.245,
+  "username": null,
+  "name": "𝙐𝙉𝘾𝙇𝘼𝙄𝙈𝘼𝘽𝙇𝙀𝙎 |",
+  "count": 5
+},
+{
+  "_id": {
+    "$oid": "68b74649b9037a9d1e2f9fab"
+  },
+  "user_id": {
+    "$numberLong": "5561094679"
+  },
+  "amount": 0,
+  "username": "PRITHVI_023",
+  "name": "👿ᏢᎡᏆͲᎻᏙᏆ👿",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b74bcdb9037a9d1e2f9fac"
+  },
+  "user_id": {
+    "$numberLong": "7527137990"
+  },
+  "amount": 0,
+  "username": "Money_bankb",
+  "name": "𝔹 𝔼 ℝ 𝕃 𝕀 ℕ 💰",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b7ccd1b9037a9d1e2f9faf"
+  },
+  "user_id": {
+    "$numberLong": "7075075335"
+  },
+  "amount": 1005.9,
+  "username": "Peterparker946",
+  "name": "Peter",
+  "count": 3
+},
+{
+  "_id": {
+    "$oid": "68b7d13bb9037a9d1e2f9fb1"
+  },
+  "user_id": {
+    "$numberLong": "7914825192"
+  },
+  "amount": 0,
+  "username": "Loki_odison17",
+  "name": "Loki",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b7e4d4b9037a9d1e2f9fb5"
+  },
+  "user_id": 780116519,
+  "amount": 10357,
+  "username": "RAMBO_86",
+  "name": "『尺ＡＭＢＯ』™",
+  "count": 6
+},
+{
+  "_id": {
+    "$oid": "68b814bdb9037a9d1e2f9fbd"
+  },
+  "user_id": {
+    "$numberLong": "6683104668"
+  },
+  "amount": 56574.92,
+  "username": "Cryptodubaii",
+  "name": "BABA",
+  "count": 20
+},
+{
+  "_id": {
+    "$oid": "68b823b2b9037a9d1e2f9fc1"
+  },
+  "user_id": {
+    "$numberLong": "7941842721"
+  },
+  "amount": 173.8,
+  "username": null,
+  "name": "@Accorto_xD",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b823b2b9037a9d1e2f9fc2"
+  },
+  "user_id": 1373054769,
+  "amount": 808.8,
+  "username": "JAYANT_HANDSOME767",
+  "name": "🚩[🇮🇳] ᴊᴀʏᴀɴᴛ ʜᴀɴᴅsᴏᴍᴇ 【⋆𝘽𝙂⋆】",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68b8429bb9037a9d1e2f9fcb"
+  },
+  "user_id": 1998955281,
+  "amount": 811.75,
+  "username": "LUZIFER_X",
+  "name": "𓆩 𝙇 𝙐 𝙕 𝙄 𝙁 𝙀 𝙍 𓆪",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68b84696b9037a9d1e2f9fcd"
+  },
+  "user_id": {
+    "$numberLong": "7041720516"
+  },
+  "amount": 221.5,
+  "username": "Joyyboyy7",
+  "name": "Joy Boy",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b84885b9037a9d1e2f9fce"
+  },
+  "user_id": {
+    "$numberLong": "7162307895"
+  },
+  "amount": 38415.1,
+  "username": null,
+  "name": "ᴡʜɪᴛᴇʜᴏᴜꜱᴇ™",
+  "count": 19
+},
+{
+  "_id": {
+    "$oid": "68b85bf0b9037a9d1e2f9fd0"
+  },
+  "user_id": 1751278003,
+  "amount": 1393.8,
+  "username": "fuckboi7828",
+  "name": "Fuck",
+  "count": 3
+},
+{
+  "_id": {
+    "$oid": "68b8636db9037a9d1e2f9fd2"
+  },
+  "user_id": 1426874730,
+  "amount": 3973.6000000000004,
+  "username": "fireeefist",
+  "name": "Ace",
+  "count": 10
+},
+{
+  "_id": {
+    "$oid": "68b8636db9037a9d1e2f9fd3"
+  },
+  "user_id": {
+    "$numberLong": "5004512487"
+  },
+  "amount": 729.3,
+  "username": "Maximusdecimusmeridius00",
+  "name": "Dave",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68b87307b9037a9d1e2f9fd8"
+  },
+  "user_id": 759918332,
+  "amount": 3403.32,
+  "username": "its_Shubham_King",
+  "name": "Ḳïńġ ꧁Ṩḧüḅḧäṃ",
+  "count": 4
+},
+{
+  "_id": {
+    "$oid": "68b87307b9037a9d1e2f9fd9"
+  },
+  "user_id": 1789096626,
+  "amount": 3635.48,
+  "username": "wickjo1",
+  "name": "Dante",
+  "count": 7
+},
+{
+  "_id": {
+    "$oid": "68b87f95b9037a9d1e2f9fda"
+  },
+  "user_id": 2085070763,
+  "amount": 8885.983,
+  "username": "HYDRAXARYAN",
+  "name": "HYDRA X ARYAN💸",
+  "count": 9
+},
+{
+  "_id": {
+    "$oid": "68b960925bd9b9c82f22a5b4"
+  },
+  "user_id": {
+    "$numberLong": "8043071710"
+  },
+  "amount": 23695.5,
+  "username": "Thughisar",
+  "name": "Thug",
+  "count": 11
+},
+{
+  "_id": {
+    "$oid": "68b97b7b5bd9b9c82f22a5bd"
+  },
+  "user_id": {
+    "$numberLong": "7100028166"
+  },
+  "amount": 1363.08,
+  "username": null,
+  "name": "Lex",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68b97cdb5bd9b9c82f22a5bf"
+  },
+  "user_id": {
+    "$numberLong": "6535979303"
+  },
+  "amount": 220,
+  "username": "Rajesh_RRRRRR",
+  "name": "Rajesh",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68b97f7d5bd9b9c82f22a5c0"
+  },
+  "user_id": {
+    "$numberLong": "7942901291"
+  },
+  "amount": 186.6,
+  "username": "Harsh8001i",
+  "name": "Harsh",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b99d3d5bd9b9c82f22a5c4"
+  },
+  "user_id": {
+    "$numberLong": "6538721413"
+  },
+  "amount": 67.5,
+  "username": "Criccoderx",
+  "name": "Spartan",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68b9bfe55bd9b9c82f22a5c7"
+  },
+  "user_id": {
+    "$numberLong": "5147242765"
+  },
+  "amount": 1854.3200000000002,
+  "username": "SpamkingDAN",
+  "name": "D A N",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68b9c1385bd9b9c82f22a5c8"
+  },
+  "user_id": {
+    "$numberLong": "7308669296"
+  },
+  "amount": 4465.7,
+  "username": "P4rthgupta",
+  "name": "𝑩𝑨𝑩𝑨",
+  "count": 4
+},
+{
+  "_id": {
+    "$oid": "68b9c1385bd9b9c82f22a5c9"
+  },
+  "user_id": {
+    "$numberLong": "7762659513"
+  },
+  "amount": 323,
+  "username": "Moneyfuckingsocietyy",
+  "name": "MONEY🇮🇳",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68baa8f15bd9b9c82f22a5da"
+  },
+  "user_id": 975304342,
+  "amount": 2578.08,
+  "username": "MAHESH_024",
+  "name": "Mahesh",
+  "count": 3
+},
+{
+  "_id": {
+    "$oid": "68baa9155bd9b9c82f22a5db"
+  },
+  "user_id": {
+    "$numberLong": "7210801266"
+  },
+  "amount": 8285,
+  "username": "Backup937",
+  "name": "𝐒𝐀𝐓𝐘𝐀𝐌",
+  "count": 9
+},
+{
+  "_id": {
+    "$oid": "68babcfd5bd9b9c82f22a5df"
+  },
+  "user_id": {
+    "$numberLong": "5594075990"
+  },
+  "amount": 15461.8,
+  "username": "Firedho",
+  "name": "Fire",
+  "count": 16
+},
+{
+  "_id": {
+    "$oid": "68bae7c85bd9b9c82f22a5e6"
+  },
+  "user_id": {
+    "$numberLong": "7626452545"
+  },
+  "amount": 1458.5,
+  "username": "Systumhiaisahai",
+  "name": "My self systum",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68bafb735bd9b9c82f22a5ea"
+  },
+  "user_id": {
+    "$numberLong": "7485164754"
+  },
+  "amount": 10808.65,
+  "username": "LAYERSm",
+  "name": "ʟᴀʏᴇʀ ʙᴜʏᴇʀ",
+  "count": 6
+},
+{
+  "_id": {
+    "$oid": "68bafd885bd9b9c82f22a5eb"
+  },
+  "user_id": {
+    "$numberLong": "7548329472"
+  },
+  "amount": 114,
+  "username": null,
+  "name": "dead",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68bb06fb5bd9b9c82f22a5ed"
+  },
+  "user_id": {
+    "$numberLong": "6800327610"
+  },
+  "amount": 9059,
+  "username": "oiejdhd",
+  "name": "ㅤㅤㅤㅤㅤ",
+  "count": 7
+},
+{
+  "_id": {
+    "$oid": "68bb07155bd9b9c82f22a5ee"
+  },
+  "user_id": {
+    "$numberLong": "8067895153"
+  },
+  "amount": 209,
+  "username": "Mayurvijaymalve",
+  "name": "MAYUR",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bb0bcc5bd9b9c82f22a5ef"
+  },
+  "user_id": {
+    "$numberLong": "6242052606"
+  },
+  "amount": 0,
+  "username": "g4rxd",
+  "name": "- G4ʀxᴅ | ⌁ [ Be Aware Of Imposters ]",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bb11d65bd9b9c82f22a5f0"
+  },
+  "user_id": {
+    "$numberLong": "8405657147"
+  },
+  "amount": 0,
+  "username": "ethnic",
+  "name": "Carbohydrate",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bb239a5bd9b9c82f22a5f2"
+  },
+  "user_id": 839167939,
+  "amount": 224.7,
+  "username": "Noobda69",
+  "name": "Enfielder A Noob",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bb53975bd9b9c82f22a5f3"
+  },
+  "user_id": {
+    "$numberLong": "7951143767"
+  },
+  "amount": 39,
+  "username": "akonotp",
+  "name": "Akon",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68bbd5845bd9b9c82f22a5f6"
+  },
+  "user_id": {
+    "$numberLong": "8053213049"
+  },
+  "amount": 307,
+  "username": "Evilcorpishere",
+  "name": "Rebel",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bbeb6e5bd9b9c82f22a5f7"
+  },
+  "user_id": {
+    "$numberLong": "6937940201"
+  },
+  "amount": 3161.3,
+  "username": "Novinbst",
+  "name": "Novin Bansal",
+  "count": 8
+},
+{
+  "_id": {
+    "$oid": "68bc103b5bd9b9c82f22a5fe"
+  },
+  "user_id": {
+    "$numberLong": "6721163181"
+  },
+  "amount": 203.4,
+  "username": "AkulxD",
+  "name": "A¢ul♠",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bc103b5bd9b9c82f22a5ff"
+  },
+  "user_id": {
+    "$numberLong": "8184012769"
+  },
+  "amount": 2917.4,
+  "username": null,
+  "name": "Subs",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68bc1bb65bd9b9c82f22a603"
+  },
+  "user_id": {
+    "$numberLong": "5014356249"
+  },
+  "amount": 9695.45,
+  "username": "destinyhu",
+  "name": "Destiny",
+  "count": 22
+},
+{
+  "_id": {
+    "$oid": "68bc1bb65bd9b9c82f22a604"
+  },
+  "user_id": {
+    "$numberLong": "6684244590"
+  },
+  "amount": 944.44,
+  "username": "mishraxescrow",
+  "name": "MISHRA",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68bc20b45bd9b9c82f22a605"
+  },
+  "user_id": {
+    "$numberLong": "5142665970"
+  },
+  "amount": 17729,
+  "username": "pkdaaru",
+  "name": "⚜️⃟🇮🇳PK~𝙨𝙥𝙞𝙧𝙞𝙩𝙨™༽﻿",
+  "count": 29
+},
+{
+  "_id": {
+    "$oid": "68bc37ea5bd9b9c82f22a607"
+  },
+  "user_id": 1878683591,
+  "amount": 1111.11,
+  "username": "IC_CLUTCHER",
+  "name": "CLUTCHER",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bc49025bd9b9c82f22a60a"
+  },
+  "user_id": {
+    "$numberLong": "7796224750"
+  },
+  "amount": 0,
+  "username": "YashhShah",
+  "name": "Yash",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bd2e2c5bd9b9c82f22a610"
+  },
+  "user_id": {
+    "$numberLong": "7890860552"
+  },
+  "amount": 50,
+  "username": "netrvisa",
+  "name": "Rufnut (Stock Available)",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bd7ca15bd9b9c82f22a61b"
+  },
+  "user_id": {
+    "$numberLong": "8052991204"
+  },
+  "amount": 1184,
+  "username": "KingMafia911",
+  "name": "𝐌𝐚𝐟𝐢𝐚 🐊",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68bd7ca15bd9b9c82f22a61c"
+  },
+  "user_id": {
+    "$numberLong": "6495682219"
+  },
+  "amount": 2549,
+  "username": "rxgnarok",
+  "name": "Saiko",
+  "count": 4
+},
+{
+  "_id": {
+    "$oid": "68bde1335eca9a4df3b4fec6"
+  },
+  "user_id": {
+    "$numberLong": "7248556446"
+  },
+  "amount": 0,
+  "username": "abhirocksss",
+  "name": "Abhi",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bde2245eca9a4df3b4fec7"
+  },
+  "user_id": {
+    "$numberLong": "5508727728"
+  },
+  "amount": 0,
+  "username": "v8ninja",
+  "name": "AJIT乛",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68be53995eca9a4df3b4fec9"
+  },
+  "user_id": {
+    "$numberLong": "8440623555"
+  },
+  "amount": 691.5,
+  "username": "o632o",
+  "name": "ՏᗩᖇᕼᗩT",
+  "count": 3
+},
+{
+  "_id": {
+    "$oid": "68be58d95eca9a4df3b4fecc"
+  },
+  "user_id": {
+    "$numberLong": "7737553879"
+  },
+  "amount": 8917.02,
+  "username": "redd_tornado",
+  "name": "Red",
+  "count": 5
+},
+{
+  "_id": {
+    "$oid": "68be6d165eca9a4df3b4fecf"
+  },
+  "user_id": {
+    "$numberLong": "8099018141"
+  },
+  "amount": 8237,
+  "username": "Richesttpro",
+  "name": "Xavier",
+  "count": 7
+},
+{
+  "_id": {
+    "$oid": "68be778b5eca9a4df3b4fed2"
+  },
+  "user_id": 625661501,
+  "amount": 929,
+  "username": "The_mortex",
+  "name": "𝑻𝑯𝑬",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68be84565eca9a4df3b4fed6"
+  },
+  "user_id": {
+    "$numberLong": "7275702542"
+  },
+  "amount": 670.3499999999999,
+  "username": "refuxbackup",
+  "name": "WHITE SOUCE PASTA",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68be8e255eca9a4df3b4feda"
+  },
+  "user_id": {
+    "$numberLong": "5131483915"
+  },
+  "amount": 2188,
+  "username": "Fucktheadmins",
+  "name": "DADDY",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68be9abc5eca9a4df3b4fedc"
+  },
+  "user_id": {
+    "$numberLong": "8077335409"
+  },
+  "amount": 184,
+  "username": "MI9978",
+  "name": "Ui PAY",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68beaa8f5eca9a4df3b4fedf"
+  },
+  "user_id": {
+    "$numberLong": "6724724537"
+  },
+  "amount": 224.99,
+  "username": "trippysz",
+  "name": "Trippy",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68beb1fb5eca9a4df3b4fee4"
+  },
+  "user_id": 1970380597,
+  "amount": 6098.799999999999,
+  "username": "PREMIUMBAZAR",
+  "name": "106K 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐁𝐀𝐙𝐀𝐑",
+  "count": 6
+},
+{
+  "_id": {
+    "$oid": "68bece345eca9a4df3b4fee9"
+  },
+  "user_id": {
+    "$numberLong": "7351726265"
+  },
+  "amount": 4352.3,
+  "username": "Hukumkaraja",
+  "name": "Hukum",
+  "count": 3
+},
+{
+  "_id": {
+    "$oid": "68bf03d65eca9a4df3b4feed"
+  },
+  "user_id": {
+    "$numberLong": "8085776826"
+  },
+  "amount": 172.2,
+  "username": "Harshjiiii",
+  "name": "GOKU",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bfcbd45eca9a4df3b4fef7"
+  },
+  "user_id": {
+    "$numberLong": "5623082041"
+  },
+  "amount": 500,
+  "username": "YesBoiYes",
+  "name": "V.K",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bfdb735eca9a4df3b4fefb"
+  },
+  "user_id": {
+    "$numberLong": "7294776733"
+  },
+  "amount": 717.3,
+  "username": "amannUSDT",
+  "name": "aman",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68bfe3065eca9a4df3b4fefd"
+  },
+  "user_id": {
+    "$numberLong": "8390515459"
+  },
+  "amount": 1567,
+  "username": "asknigga",
+  "name": "𝑼𝑵𝑪𝑳𝑨𝑰𝑴𝑨𝑩𝑳𝑬𝑺 |",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68bfe7815eca9a4df3b4fefe"
+  },
+  "user_id": 877016337,
+  "amount": 0,
+  "username": "Devil_0P",
+  "name": "[🇮🇳] ཌdͥevͣiͫlད [🇮🇳]",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68bfee5c5eca9a4df3b4ff01"
+  },
+  "user_id": 1262628856,
+  "amount": 113,
+  "username": "LuFFy_online",
+  "name": "LuFFy",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c01dac16638b61de54d89e"
+  },
+  "user_id": {
+    "$numberLong": "6979629563"
+  },
+  "amount": 12571.3,
+  "username": "Nothing868",
+  "name": "Devil backup",
+  "count": 11
+},
+{
+  "_id": {
+    "$oid": "68c01e7b16638b61de54d8a0"
+  },
+  "user_id": 1169519594,
+  "amount": 0,
+  "username": "ShibamXAries",
+  "name": "𝗦𝗵𝗶𝗯𝗮𝗺 🪼",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c05cd416638b61de54d8a7"
+  },
+  "user_id": {
+    "$numberLong": "6038742054"
+  },
+  "amount": 18397.11,
+  "username": "KATILHR",
+  "name": "𝐊𝐀𝐓𝐈𝐋 हरियाणा सरकार",
+  "count": 30
+},
+{
+  "_id": {
+    "$oid": "68c12528fd6605d0a4371eba"
+  },
+  "user_id": 1893318402,
+  "amount": 0,
+  "username": "sparsh003",
+  "name": "S P A R S H",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c12a34fd6605d0a4371ebc"
+  },
+  "user_id": {
+    "$numberLong": "8062930240"
+  },
+  "amount": 1059.2,
+  "username": "Luxverge",
+  "name": "Ankush",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68c12ceafd6605d0a4371ebd"
+  },
+  "user_id": {
+    "$numberLong": "6498048386"
+  },
+  "amount": 20.307000000000002,
+  "username": null,
+  "name": "Freaky / exchanger",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68c12cebfd6605d0a4371ebe"
+  },
+  "user_id": 816037686,
+  "amount": 20.307000000000002,
+  "username": null,
+  "name": "Hacked @TReatsAi2Bot",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68c13f4dfd6605d0a4371ec5"
+  },
+  "user_id": 760085821,
+  "amount": 568.91,
+  "username": "qq9795",
+  "name": "特饮",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c14ebffd6605d0a4371ec9"
+  },
+  "user_id": 1448543359,
+  "amount": 952.3,
+  "username": "Rj212121",
+  "name": "Rj",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c155dafd6605d0a4371ecb"
+  },
+  "user_id": {
+    "$numberLong": "7897217290"
+  },
+  "amount": 108,
+  "username": "iRDXOP",
+  "name": "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎𝐑𝐃𝐗",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c16654fd6605d0a4371ed0"
+  },
+  "user_id": {
+    "$numberLong": "7647132130"
+  },
+  "amount": 2352.3199999999997,
+  "username": "KK998U",
+  "name": "OUWS",
+  "count": 4
+},
+{
+  "_id": {
+    "$oid": "68c16655fd6605d0a4371ed1"
+  },
+  "user_id": {
+    "$numberLong": "7602310781"
+  },
+  "amount": 21,
+  "username": "Govan4454",
+  "name": "Govan",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c173f4fd6605d0a4371ed5"
+  },
+  "user_id": {
+    "$numberLong": "7894415615"
+  },
+  "amount": 1875.79,
+  "username": null,
+  "name": "Vinit",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68c1790cfd6605d0a4371ed9"
+  },
+  "user_id": {
+    "$numberLong": "8405431295"
+  },
+  "amount": 45.6,
+  "username": "Saurabh2882",
+  "name": "Saurabh",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c17d32fd6605d0a4371edc"
+  },
+  "user_id": {
+    "$numberLong": "6915430081"
+  },
+  "amount": 225.45,
+  "username": "Xoxd10",
+  "name": "Xo",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c279bbfd6605d0a4371eeb"
+  },
+  "user_id": {
+    "$numberLong": "6063045110"
+  },
+  "amount": 2486,
+  "username": "Yashhuji",
+  "name": "Ｙａａｓｈ",
+  "count": 3
+},
+{
+  "_id": {
+    "$oid": "68c28a3efd6605d0a4371eef"
+  },
+  "user_id": {
+    "$numberLong": "7571762177"
+  },
+  "amount": 830,
+  "username": "realpzmir",
+  "name": "PZ",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c28c0afd6605d0a4371ef0"
+  },
+  "user_id": 382856851,
+  "amount": 0,
+  "username": "ColdSmokerr",
+  "name": "CRAZY",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c28d0dfd6605d0a4371ef1"
+  },
+  "user_id": {
+    "$numberLong": "6615042202"
+  },
+  "amount": 0,
+  "username": "RefuXOP1",
+  "name": "𝐑𝐄𝐅𝐔𝐗 𝐎𝐏™",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c2c514fd6605d0a4371ef8"
+  },
+  "user_id": {
+    "$numberLong": "7662320436"
+  },
+  "amount": 1278.67,
+  "username": "RevoNmN",
+  "name": "R E V O",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68c31800ce37ae07f8419d87"
+  },
+  "user_id": {
+    "$numberLong": "8198041431"
+  },
+  "amount": 705,
+  "username": "jacksparrowlol",
+  "name": "Jack",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c31800ce37ae07f8419d88"
+  },
+  "user_id": {
+    "$numberLong": "5590624724"
+  },
+  "amount": 1020,
+  "username": "Berlinz_75",
+  "name": "ㅤㅤBerlin",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68c3cd81b6545697f93d4216"
+  },
+  "user_id": {
+    "$numberLong": "8495003405"
+  },
+  "amount": 3716,
+  "username": "Usdtretail2",
+  "name": "Og",
+  "count": 3
+},
+{
+  "_id": {
+    "$oid": "68c3d742b6545697f93d4218"
+  },
+  "user_id": {
+    "$numberLong": "7356607989"
+  },
+  "amount": 617.5,
+  "username": "ScamxGaming",
+  "name": "Boss",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c3f625b6545697f93d4221"
+  },
+  "user_id": {
+    "$numberLong": "8219723410"
+  },
+  "amount": 653,
+  "username": "rakesh_113",
+  "name": "Rakesh",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68c3fde4b6545697f93d4222"
+  },
+  "user_id": 1346649329,
+  "amount": 6377,
+  "username": "itsSiNistA",
+  "name": "Sinista",
+  "count": 12
+},
+{
+  "_id": {
+    "$oid": "68c41efbb6545697f93d4229"
+  },
+  "user_id": {
+    "$numberLong": "7845933019"
+  },
+  "amount": 3184.2,
+  "username": "RazorFunds",
+  "name": "razor.",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68c41f44b6545697f93d422a"
+  },
+  "user_id": {
+    "$numberLong": "5296275830"
+  },
+  "amount": 0,
+  "username": "TELKING_ADMIN",
+  "name": "𝕋𝔼𝕃𝕂𝕀ℕ𝔾 ℂΣ𝕆 🧿",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c44516b6545697f93d422c"
+  },
+  "user_id": {
+    "$numberLong": "5539089933"
+  },
+  "amount": 1096.4099999999999,
+  "username": "maaisonn",
+  "name": "Exortion",
+  "count": 1
+},
+{
+  "_id": {
+    "$oid": "68c447a5b6545697f93d422e"
+  },
+  "user_id": {
+    "$numberLong": "6577546313"
+  },
+  "amount": 650,
+  "username": null,
+  "name": "BlackzHere {Giving Remote Exam}",
+  "count": 2
+},
+{
+  "_id": {
+    "$oid": "68c448a0b6545697f93d422f"
+  },
+  "user_id": {
+    "$numberLong": "6933885623"
+  },
+  "amount": 0,
+  "username": "Rasfered",
+  "name": "Rasfered",
+  "count": 0
+},
+{
+  "_id": {
+    "$oid": "68c54a8c5bc10f6c4ea0a0db"
+  },
+  "user_id": {
+    "$numberLong": "5459582367"
+  },
+  "amount": 3973,
+  "count": 6,
+  "name": "Birdiehen",
+  "username": "Birdiehen"
+},
+{
+  "_id": {
+    "$oid": "68c54ab55bc10f6c4ea0a0dd"
+  },
+  "user_id": {
+    "$numberLong": "5202065486"
+  },
+  "amount": 9164,
+  "count": 22,
+  "name": "February",
+  "username": "DevXFeb"
+},
+{
+  "_id": {
+    "$oid": "68c54ab65bc10f6c4ea0a0de"
+  },
+  "user_id": {
+    "$numberLong": "8038890741"
+  },
+  "amount": 44,
+  "count": 1,
+  "name": "Surve",
+  "username": "Manyasurve720"
+},
+{
+  "_id": {
+    "$oid": "68c5589d5bc10f6c4ea0a14b"
+  },
+  "user_id": {
+    "$numberLong": "6928774006"
+  },
+  "amount": 83,
+  "count": 1,
+  "name": "• 𝙴𝚁𝙴𝙽",
+  "username": "ERENxSELLER"
+},
+{
+  "_id": {
+    "$oid": "68c576ef5bc10f6c4ea0a217"
+  },
+  "user_id": {
+    "$numberLong": "8044204879"
+  },
+  "amount": 2744,
+  "count": 6,
+  "name": "૨αƭ",
+  "username": "RatVish"
+},
+{
+  "_id": {
+    "$oid": "68c652e95bc10f6c4ea0a5a2"
+  },
+  "user_id": 1049161548,
+  "amount": 120,
+  "count": 1,
+  "name": "बाबा जी 😌❤️🙏🏻🔱",
+  "username": "BABA_ji1015"
+},
+{
+  "_id": {
+    "$oid": "68c652e95bc10f6c4ea0a5a3"
+  },
+  "user_id": {
+    "$numberLong": "7426891110"
+  },
+  "amount": 700,
+  "count": 5,
+  "name": "Ashu",
+  "username": null
+},
+{
+  "_id": {
+    "$oid": "68c6be7f5bc10f6c4ea0a86d"
+  },
+  "user_id": {
+    "$numberLong": "6568910046"
+  },
+  "amount": 31,
+  "count": 1,
+  "name": "𝗠𝗿 𝗗𝗿𝗮𝘀𝘁𝗶𝗰",
+  "username": "realdrastic"
+},
+{
+  "_id": {
+    "$oid": "68c6be7f5bc10f6c4ea0a86e"
+  },
+  "user_id": {
+    "$numberLong": "8162000682"
+  },
+  "amount": 31,
+  "count": 1,
+  "name": "Hail",
+  "username": "Hailusa"
+},
+{
+  "_id": {
+    "$oid": "68c7af3a5bc10f6c4ea0b051"
+  },
+  "user_id": {
+    "$numberLong": "7774454516"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Jenish",
+  "username": "kavish_malhotra"
+},
+{
+  "_id": {
+    "$oid": "68c80c7e5bc10f6c4ea0b532"
+  },
+  "user_id": {
+    "$numberLong": "8078334930"
+  },
+  "amount": 14870,
+  "count": 17,
+  "name": "Red",
+  "username": "Redd_tornado"
+},
+{
+  "_id": {
+    "$oid": "68c80edd5bc10f6c4ea0b551"
+  },
+  "user_id": {
+    "$numberLong": "6285190171"
+  },
+  "amount": 2384,
+  "count": 4,
+  "name": "𝐒𝐔𝐌𝐀𝐍",
+  "username": "uncloze"
+},
+{
+  "_id": {
+    "$oid": "68c820225bc10f6c4ea0b600"
+  },
+  "user_id": {
+    "$numberLong": "7705852791"
+  },
+  "amount": 4081,
+  "count": 7,
+  "name": "punisher",
+  "username": "aboveyouaII"
+},
+{
+  "_id": {
+    "$oid": "68c826f25bc10f6c4ea0b663"
+  },
+  "user_id": {
+    "$numberLong": "8267463867"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Hukam dollars",
+  "username": "hukamdollars"
+},
+{
+  "_id": {
+    "$oid": "68c837e15bc10f6c4ea0b7df"
+  },
+  "user_id": 1813889234,
+  "amount": 226,
+  "count": 1,
+  "name": "Ciroc",
+  "username": "ciroc123"
+},
+{
+  "_id": {
+    "$oid": "68c838625bc10f6c4ea0b807"
+  },
+  "user_id": {
+    "$numberLong": "5379548040"
+  },
+  "amount": 3216,
+  "count": 2,
+  "name": "Pro",
+  "username": "A812ss"
+},
+{
+  "_id": {
+    "$oid": "68c8466d5bc10f6c4ea0b863"
+  },
+  "user_id": 2131842257,
+  "amount": 528,
+  "count": 1,
+  "name": "Pavan",
+  "username": "yescrower"
+},
+{
+  "_id": {
+    "$oid": "68c945745bc10f6c4ea0bf2d"
+  },
+  "user_id": {
+    "$numberLong": "7395748609"
+  },
+  "amount": 299,
+  "count": 1,
+  "name": "quenton",
+  "username": "realquenton"
+},
+{
+  "_id": {
+    "$oid": "68c948f45bc10f6c4ea0bf77"
+  },
+  "user_id": {
+    "$numberLong": "8141788607"
+  },
+  "amount": 200,
+  "count": 1,
+  "name": "Harshpreet",
+  "username": "Harshpreetji"
+},
+{
+  "_id": {
+    "$oid": "68c95e395bc10f6c4ea0c120"
+  },
+  "user_id": {
+    "$numberLong": "8244189944"
+  },
+  "amount": 678,
+  "count": 1,
+  "name": "Vinsmoke",
+  "username": "blessedbykarma"
+},
+{
+  "_id": {
+    "$oid": "68c97fee5bc10f6c4ea0c54b"
+  },
+  "user_id": 1124599299,
+  "amount": 668,
+  "count": 2,
+  "name": "Apex",
+  "username": "apexlegendowner"
+},
+{
+  "_id": {
+    "$oid": "68c99e8c5bc10f6c4ea0ca2e"
+  },
+  "user_id": {
+    "$numberLong": "6869369625"
+  },
+  "amount": 84,
+  "count": 1,
+  "name": "Laptop",
+  "username": "Iaptops"
+},
+{
+  "_id": {
+    "$oid": "68ca68e25bc10f6c4ea0ea42"
+  },
+  "user_id": {
+    "$numberLong": "8397479679"
+  },
+  "amount": 515,
+  "count": 1,
+  "name": "Lindsay",
+  "username": "Lindsaydon"
+},
+{
+  "_id": {
+    "$oid": "68ca7c855bc10f6c4ea0eddd"
+  },
+  "user_id": {
+    "$numberLong": "7846711730"
+  },
+  "amount": 2499,
+  "count": 1,
+  "name": "Work",
+  "username": "work9work9"
+},
+{
+  "_id": {
+    "$oid": "68ca81035bc10f6c4ea0eed8"
+  },
+  "user_id": {
+    "$numberLong": "7552182339"
+  },
+  "amount": 914,
+  "count": 4,
+  "name": "abandoned",
+  "username": "abandoned_Xd"
+},
+{
+  "_id": {
+    "$oid": "68ca81035bc10f6c4ea0eeda"
+  },
+  "user_id": {
+    "$numberLong": "7669896964"
+  },
+  "amount": 750,
+  "count": 4,
+  "name": "Rocky",
+  "username": "RockycEva"
+},
+{
+  "_id": {
+    "$oid": "68ca833a5bc10f6c4ea0ef32"
+  },
+  "user_id": {
+    "$numberLong": "6402876502"
+  },
+  "amount": 28042,
+  "count": 50,
+  "name": "Thakur",
+  "username": "thakur_xxx"
+},
+{
+  "_id": {
+    "$oid": "68ca851b5bc10f6c4ea0efa0"
+  },
+  "user_id": {
+    "$numberLong": "7879858463"
+  },
+  "amount": 15265,
+  "count": 17,
+  "name": "𝗩𝗔𝗡𝗜𝗧",
+  "username": null
+},
+{
+  "_id": {
+    "$oid": "68ca87df5bc10f6c4ea0f02a"
+  },
+  "user_id": {
+    "$numberLong": "7649600818"
+  },
+  "amount": 330,
+  "count": 1,
+  "name": "Ken",
+  "username": "Ken_Ghoul1"
+},
+{
+  "_id": {
+    "$oid": "68cadac85bc10f6c4ea0fbc7"
+  },
+  "user_id": 2139766803,
+  "amount": 250,
+  "count": 2,
+  "name": "Aɴᴜʀᴀɢ™",
+  "username": "notankith"
+},
+{
+  "_id": {
+    "$oid": "68cadb765bc10f6c4ea0fbdd"
+  },
+  "user_id": {
+    "$numberLong": "7616333122"
+  },
+  "amount": 3788,
+  "count": 6,
+  "name": "𝙷̷𝚞̷𝚜̷𝚝̷𝚕̷𝚎̷𝚛̷",
+  "username": "hustlee_hard"
+},
+{
+  "_id": {
+    "$oid": "68cb0f445bc10f6c4ea0ff62"
+  },
+  "user_id": {
+    "$numberLong": "6978600149"
+  },
+  "amount": 101,
+  "count": 1,
+  "name": "sonic { off due to exams }",
+  "username": "sonicxd"
+},
+{
+  "_id": {
+    "$oid": "68cb2a7c5bc10f6c4ea10100"
+  },
+  "user_id": {
+    "$numberLong": "8230078058"
+  },
+  "amount": 3300,
+  "count": 1,
+  "name": "Chota",
+  "username": "Chotaus"
+},
+{
+  "_id": {
+    "$oid": "68cb8f5f5bc10f6c4ea10755"
+  },
+  "user_id": 927415418,
+  "amount": 449,
+  "count": 1,
+  "name": "𝙍𝙞𝙤 𝙈𝙖𝙠𝙚𝙨 𝙈𝙤𝙣𝙚𝙮 (CDM AVAILABLE 89.5/$) 24/7",
+  "username": "riomakesmoney"
+},
+{
+  "_id": {
+    "$oid": "68cb9d6c5bc10f6c4ea1086a"
+  },
+  "user_id": 1916720218,
+  "amount": 96,
+  "count": 1,
+  "name": "Chimu Official",
+  "username": "Chutmailavda"
+},
+{
+  "_id": {
+    "$oid": "68cba3c65bc10f6c4ea10920"
+  },
+  "user_id": {
+    "$numberLong": "7288484916"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "YUVI",
+  "username": "jewelleryman"
+},
+{
+  "_id": {
+    "$oid": "68cbe890bbb270b0738f2735"
+  },
+  "user_id": {
+    "$numberLong": "6657267816"
+  },
+  "amount": 1000,
+  "count": 1,
+  "name": "Drignar",
+  "username": "dringnar"
+},
+{
+  "_id": {
+    "$oid": "68cbf697bbb270b0738f28cf"
+  },
+  "user_id": {
+    "$numberLong": "5873940789"
+  },
+  "amount": 164,
+  "count": 1,
+  "name": "𝗖𝘆𝗯𝟯𝗿𝗚𝗼𝗗 @TreatsAi2Bot",
+  "username": "TheCyb3rGoD"
+},
+{
+  "_id": {
+    "$oid": "68cc0ff87fae941ae1dc80c9"
+  },
+  "user_id": {
+    "$numberLong": "8362010030"
+  },
+  "amount": 348,
+  "count": 1,
+  "name": "syer",
+  "username": "syer65"
+},
+{
+  "_id": {
+    "$oid": "68cc18be7fae941ae1dc8166"
+  },
+  "user_id": {
+    "$numberLong": "8164356161"
+  },
+  "amount": 5077,
+  "count": 16,
+  "name": "aman",
+  "username": "amanfr"
+},
+{
+  "_id": {
+    "$oid": "68cc308c80b7d1a0776dd159"
+  },
+  "user_id": {
+    "$numberLong": "8273166866"
+  },
+  "amount": 829,
+  "count": 2,
+  "name": "The",
+  "username": "TheRowdY0001"
+},
+{
+  "_id": {
+    "$oid": "68ccfa1a80b7d1a0777024be"
+  },
+  "user_id": 1240157688,
+  "amount": 857,
+  "count": 1,
+  "name": "Łucifer",
+  "username": "LuciferMedias"
+},
+{
+  "_id": {
+    "$oid": "68cd004f80b7d1a077702555"
+  },
+  "user_id": {
+    "$numberLong": "6919081594"
+  },
+  "amount": 331,
+  "count": 1,
+  "name": "Suraj singh rathore 🎖️🆘",
+  "username": "Instgramofficalsupport"
+},
+{
+  "_id": {
+    "$oid": "68cd1bbd80b7d1a07770284c"
+  },
+  "user_id": {
+    "$numberLong": "8042721394"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Star",
+  "username": "star_hu_mai"
+},
+{
+  "_id": {
+    "$oid": "68cd3a2680b7d1a077702b32"
+  },
+  "user_id": {
+    "$numberLong": "8492186900"
+  },
+  "amount": 500,
+  "count": 1,
+  "name": "Jayant",
+  "username": "Achilious"
+},
+{
+  "_id": {
+    "$oid": "68cd445680b7d1a077702bf9"
+  },
+  "user_id": 1810538872,
+  "amount": 100,
+  "count": 1,
+  "name": "〖Ｊｅｓｓｙｐｉｎｋ ｍａｎ〗",
+  "username": "Stranger667"
+},
+{
+  "_id": {
+    "$oid": "68cd48ff80b7d1a077702c77"
+  },
+  "user_id": 1915054632,
+  "amount": 311,
+  "count": 1,
+  "name": "ㅤㅤ Offline",
+  "username": "Unknownguy_xd"
+},
+{
+  "_id": {
+    "$oid": "68cd4d0b80b7d1a077702cf2"
+  },
+  "user_id": 1794184828,
+  "amount": 110,
+  "count": 1,
+  "name": "Jk",
+  "username": "NotReallyAlive"
+},
+{
+  "_id": {
+    "$oid": "68cd54b180b7d1a077702d92"
+  },
+  "user_id": 989751905,
+  "amount": 1102,
+  "count": 4,
+  "name": "🔱AãDhìYØgĪ™<®>🔱",
+  "username": "HaRnaMo"
+},
+{
+  "_id": {
+    "$oid": "68cd695b80b7d1a077703072"
+  },
+  "user_id": {
+    "$numberLong": "7590192635"
+  },
+  "amount": 543,
+  "count": 1,
+  "name": "Madmax",
+  "username": "im_madmaxx"
+},
+{
+  "_id": {
+    "$oid": "68ce023580b7d1a0777034d6"
+  },
+  "user_id": {
+    "$numberLong": "6239866860"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Gilli munda",
+  "username": "Nakii09"
+},
+{
+  "_id": {
+    "$oid": "68ce545780b7d1a0777037f9"
+  },
+  "user_id": {
+    "$numberLong": "7963848896"
+  },
+  "amount": 8046,
+  "count": 10,
+  "name": "𝐄ʟᴇᴠᴇɴ𝐗11✞︎",
+  "username": "Eleven_one1"
+},
+{
+  "_id": {
+    "$oid": "68ce668380b7d1a0777038ef"
+  },
+  "user_id": {
+    "$numberLong": "7707446170"
+  },
+  "amount": 1356,
+  "count": 1,
+  "name": "Gin",
+  "username": "XnxxSnXxx"
+},
+{
+  "_id": {
+    "$oid": "68ce83a480b7d1a077703a02"
+  },
+  "user_id": {
+    "$numberLong": "7976870951"
+  },
+  "amount": 1049,
+  "count": 2,
+  "name": "Nicklodeon",
+  "username": "nickl098"
+},
+{
+  "_id": {
+    "$oid": "68ce8e5280b7d1a077703a4a"
+  },
+  "user_id": {
+    "$numberLong": "7788556710"
+  },
+  "amount": 1120,
+  "count": 3,
+  "name": "𝗕𝗮𝗻𝗸𝘀𝗖𝗘𝗢💲",
+  "username": "Banks_CEO"
+},
+{
+  "_id": {
+    "$oid": "68ced9d780b7d1a077703da9"
+  },
+  "user_id": {
+    "$numberLong": "8153640358"
+  },
+  "amount": 869,
+  "count": 2,
+  "name": "Rahul▪️",
+  "username": "Batree2"
+},
+{
+  "_id": {
+    "$oid": "68ceebf780b7d1a077703e22"
+  },
+  "user_id": 2136341159,
+  "amount": 523,
+  "count": 2,
+  "name": "zerodayv",
+  "username": "zerodayv"
+},
+{
+  "_id": {
+    "$oid": "68ceee8180b7d1a077703e34"
+  },
+  "user_id": {
+    "$numberLong": "8431120430"
+  },
+  "amount": 2877,
+  "count": 4,
+  "name": "JAMESGOD",
+  "username": "trustedrend"
+},
+{
+  "_id": {
+    "$oid": "68ceee8180b7d1a077703e35"
+  },
+  "user_id": {
+    "$numberLong": "6448670896"
+  },
+  "amount": 9823,
+  "count": 15,
+  "name": "𝗞𝗫𝗚 !! > 🫶🏻❤️‍🩹",
+  "username": "KXGNXT"
+},
+{
+  "_id": {
+    "$oid": "68cf0bc480b7d1a077703f19"
+  },
+  "user_id": 1649372352,
+  "amount": 2993,
+  "count": 4,
+  "name": "Exsan🀄️",
+  "username": "exsan1"
+},
+{
+  "_id": {
+    "$oid": "68cfc88480b7d1a077704475"
+  },
+  "user_id": {
+    "$numberLong": "6003659491"
+  },
+  "amount": 142,
+  "count": 1,
+  "name": "dnd",
+  "username": "sh8rma"
+},
+{
+  "_id": {
+    "$oid": "68cfcc4280b7d1a07770448a"
+  },
+  "user_id": {
+    "$numberLong": "7814356623"
+  },
+  "amount": 14,
+  "count": 1,
+  "name": "Hukam",
+  "username": "hukamOG"
+},
+{
+  "_id": {
+    "$oid": "68cfcc4380b7d1a07770448b"
+  },
+  "user_id": {
+    "$numberLong": "8347812301"
+  },
+  "amount": 14,
+  "count": 1,
+  "name": "God",
+  "username": "godfatherontop1"
+},
+{
+  "_id": {
+    "$oid": "68d0157980b7d1a07770475d"
+  },
+  "user_id": {
+    "$numberLong": "7727608846"
+  },
+  "amount": 1400,
+  "count": 2,
+  "name": "𝙃𝘼𝙍𝘿𝙄𝙉 🍷",
+  "username": "MaybeHardin"
+},
+{
+  "_id": {
+    "$oid": "68d0ed3280b7d1a077707ef5"
+  },
+  "user_id": {
+    "$numberLong": "6240642178"
+  },
+  "amount": 4456,
+  "count": 6,
+  "name": "黑钱收藏 💸💸",
+  "username": "Heatbtc"
+},
+{
+  "_id": {
+    "$oid": "68d121ae80b7d1a0777080d8"
+  },
+  "user_id": 927997633,
+  "amount": 1100,
+  "count": 1,
+  "name": "yinuo",
+  "username": "yynuo"
+},
+{
+  "_id": {
+    "$oid": "68d1418b80b7d1a077708252"
+  },
+  "user_id": {
+    "$numberLong": "7678486305"
+  },
+  "amount": 4117,
+  "count": 5,
+  "name": "BABA",
+  "username": "cryptodubaii1"
+},
+{
+  "_id": {
+    "$oid": "68d142a480b7d1a077708265"
+  },
+  "user_id": {
+    "$numberLong": "5902659609"
+  },
+  "amount": 154,
+  "count": 1,
+  "name": "𝗦𝘁𝗿𝗲𝗮𝗸𝗲𝘀",
+  "username": "streakess"
+},
+{
+  "_id": {
+    "$oid": "68d1539b80b7d1a077708321"
+  },
+  "user_id": 2134092915,
+  "amount": 1254,
+  "count": 4,
+  "name": "Ƥαωαη😉",
+  "username": "Stay_Away_Scammers"
+},
+{
+  "_id": {
+    "$oid": "68d1723b80b7d1a077708449"
+  },
+  "user_id": {
+    "$numberLong": "6047646160"
+  },
+  "amount": 1621,
+  "count": 2,
+  "name": "HotDeals!",
+  "username": "hotbutbot"
+},
+{
+  "_id": {
+    "$oid": "68d1d2ba217052a9c236053c"
+  },
+  "user_id": {
+    "$numberLong": "6008909969"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "DIVU | DEV",
+  "username": "divyansh"
+},
+{
+  "_id": {
+    "$oid": "68d1f302217052a9c236057c"
+  },
+  "user_id": 1488368651,
+  "amount": 112,
+  "count": 1,
+  "name": "ＶＩＲＡＴ.",
+  "username": "Virat_here"
+},
+{
+  "_id": {
+    "$oid": "68d1faf0217052a9c2360592"
+  },
+  "user_id": {
+    "$numberLong": "7942413416"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "FASTONA",
+  "username": "Fastona"
+},
+{
+  "_id": {
+    "$oid": "68d22b43217052a9c23607d5"
+  },
+  "user_id": {
+    "$numberLong": "8152865605"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Bruno",
+  "username": "brrunnoooo"
+},
+{
+  "_id": {
+    "$oid": "68d23b48217052a9c2360843"
+  },
+  "user_id": 292340566,
+  "amount": 0,
+  "count": 0,
+  "name": "Luffy （USDTBuyers）",
+  "username": "Luffys1999"
+},
+{
+  "_id": {
+    "$oid": "68d25db9217052a9c2360919"
+  },
+  "user_id": {
+    "$numberLong": "5373821488"
+  },
+  "amount": 687,
+  "count": 3,
+  "name": "Global Sink",
+  "username": "global_sink"
+},
+{
+  "_id": {
+    "$oid": "68d2750c217052a9c23609cf"
+  },
+  "user_id": {
+    "$numberLong": "7415150063"
+  },
+  "amount": 1772,
+  "count": 3,
+  "name": "🇮🇳@LuckyT777🇮🇳",
+  "username": "LuckyTr777"
+},
+{
+  "_id": {
+    "$oid": "68d278b1217052a9c23609e5"
+  },
+  "user_id": {
+    "$numberLong": "8453007092"
+  },
+  "amount": 853,
+  "count": 2,
+  "name": "KING",
+  "username": "kingh_11"
+},
+{
+  "_id": {
+    "$oid": "68d27b36217052a9c23609ec"
+  },
+  "user_id": 1761102476,
+  "amount": 0,
+  "count": 0,
+  "name": "HAZE🃏",
+  "username": "CRHAZE"
+},
+{
+  "_id": {
+    "$oid": "68d28e96217052a9c2360a85"
+  },
+  "user_id": {
+    "$numberLong": "8480940761"
+  },
+  "amount": 191,
+  "count": 1,
+  "name": "Paradox࿐",
+  "username": "ParadoxVoid"
+},
+{
+  "_id": {
+    "$oid": "68d2b8da217052a9c2360f43"
+  },
+  "user_id": {
+    "$numberLong": "8456167218"
+  },
+  "amount": 735,
+  "count": 1,
+  "name": "𝒜𝓂𝒶𝓃",
+  "username": "i1l2f"
+},
+{
+  "_id": {
+    "$oid": "68d2c06b217052a9c2360f92"
+  },
+  "user_id": 641040091,
+  "amount": 2189,
+  "count": 7,
+  "name": "Pine",
+  "username": "PineShow"
+},
+{
+  "_id": {
+    "$oid": "68d2d5d1217052a9c236106c"
+  },
+  "user_id": 768666991,
+  "amount": 1592,
+  "count": 4,
+  "name": "Shadow",
+  "username": null
+},
+{
+  "_id": {
+    "$oid": "68d2d5d1217052a9c236106d"
+  },
+  "user_id": {
+    "$numberLong": "5009977539"
+  },
+  "amount": 2124,
+  "count": 5,
+  "name": "Maysun",
+  "username": "MaysunHanoune"
+},
+{
+  "_id": {
+    "$oid": "68d38f14217052a9c23614bf"
+  },
+  "user_id": {
+    "$numberLong": "7492633481"
+  },
+  "amount": 741,
+  "count": 1,
+  "name": "ᴛʜᴇ",
+  "username": "urh_father"
+},
+{
+  "_id": {
+    "$oid": "68d3a677217052a9c2361554"
+  },
+  "user_id": {
+    "$numberLong": "5883306785"
+  },
+  "amount": 3375,
+  "count": 8,
+  "name": "Nijmara",
+  "username": "Nijmara"
+},
+{
+  "_id": {
+    "$oid": "68d3a8d0217052a9c2361561"
+  },
+  "user_id": {
+    "$numberLong": "7525278883"
+  },
+  "amount": 739,
+  "count": 1,
+  "name": "चरम सुख वांगडू",
+  "username": "gogonation00"
+},
+{
+  "_id": {
+    "$oid": "68d3f6ec217052a9c2361a55"
+  },
+  "user_id": {
+    "$numberLong": "6138731392"
+  },
+  "amount": 3406,
+  "count": 3,
+  "name": "Krishna verma (Doremon selling)",
+  "username": "doremon0001"
+},
+{
+  "_id": {
+    "$oid": "68d43449217052a9c2361caf"
+  },
+  "user_id": {
+    "$numberLong": "5175682682"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "🥀⏤͟͟͜͞͞͡➻❥Itz Surya࿐❤️‍🔥⏤͟͟͢͞͞ i",
+  "username": "itzsuryaa"
+},
+{
+  "_id": {
+    "$oid": "68d4ea00217052a9c23621c2"
+  },
+  "user_id": {
+    "$numberLong": "5136103637"
+  },
+  "amount": 431,
+  "count": 1,
+  "name": "Goku",
+  "username": "bcl9w"
+},
+{
+  "_id": {
+    "$oid": "68d4ee62217052a9c23621e5"
+  },
+  "user_id": {
+    "$numberLong": "7408936065"
+  },
+  "amount": 795,
+  "count": 4,
+  "name": "𝑫𝒓𝒊𝒏𝒌",
+  "username": "DrinkLovers"
+},
+{
+  "_id": {
+    "$oid": "68d4f79e217052a9c236221b"
+  },
+  "user_id": {
+    "$numberLong": "7467572169"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Teacher Graciell Official 💸",
+  "username": "Teacher_Graciell"
+},
+{
+  "_id": {
+    "$oid": "68d4fdb2217052a9c236223f"
+  },
+  "user_id": {
+    "$numberLong": "7152816628"
+  },
+  "amount": 2062,
+  "count": 3,
+  "name": "USDT Demands",
+  "username": "usdtontop"
+},
+{
+  "_id": {
+    "$oid": "68d51a72217052a9c2362337"
+  },
+  "user_id": {
+    "$numberLong": "7992650860"
+  },
+  "amount": 600,
+  "count": 2,
+  "name": "Layer2",
+  "username": "Exaniclayer"
+},
+{
+  "_id": {
+    "$oid": "68d51c55217052a9c2362341"
+  },
+  "user_id": 2041378084,
+  "amount": 0,
+  "count": 0,
+  "name": "iphone",
+  "username": null
+},
+{
+  "_id": {
+    "$oid": "68d529a6217052a9c23623a2"
+  },
+  "user_id": {
+    "$numberLong": "5754156892"
+  },
+  "amount": 251,
+  "count": 1,
+  "name": "𝙆𝙄𝙉𝙂",
+  "username": "king27295"
+},
+{
+  "_id": {
+    "$oid": "68d54139217052a9c236248a"
+  },
+  "user_id": 1112672082,
+  "amount": 223,
+  "count": 1,
+  "name": "🔥 R A H U L™🔥",
+  "username": "RAHUL_xD"
+},
+{
+  "_id": {
+    "$oid": "68d60949c94a19d010b18181"
+  },
+  "user_id": {
+    "$numberLong": "5400247281"
+  },
+  "amount": 222,
+  "count": 1,
+  "name": "Priya",
+  "username": "Priyadarsan1"
+},
+{
+  "_id": {
+    "$oid": "68d635f2c94a19d010b18394"
+  },
+  "user_id": {
+    "$numberLong": "7539969180"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Redhu",
+  "username": "redhu_9103"
+},
+{
+  "_id": {
+    "$oid": "68d659cac94a19d010b184c0"
+  },
+  "user_id": {
+    "$numberLong": "5994793444"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": ".",
+  "username": "Alexxx_mt"
+},
+{
+  "_id": {
+    "$oid": "68d67e0cc94a19d010b18624"
+  },
+  "user_id": {
+    "$numberLong": "7270558681"
+  },
+  "amount": 223,
+  "count": 1,
+  "name": "Owo",
+  "username": "Owoway"
+},
+{
+  "_id": {
+    "$oid": "68d6a404c94a19d010b187bb"
+  },
+  "user_id": {
+    "$numberLong": "5843778233"
+  },
+  "amount": 446,
+  "count": 2,
+  "name": "Sameer",
+  "username": "sameerokayyy"
+},
+{
+  "_id": {
+    "$oid": "68d6b746c94a19d010b18853"
+  },
+  "user_id": {
+    "$numberLong": "8476104081"
+  },
+  "amount": 145,
+  "count": 1,
+  "name": "Lucifier",
+  "username": "Lucifier800"
+},
+{
+  "_id": {
+    "$oid": "68d6e695583defaf0fb892cf"
+  },
+  "user_id": {
+    "$numberLong": "7535137925"
+  },
+  "amount": 582,
+  "count": 2,
+  "name": "🎶",
+  "username": "jaatisopguyz"
+},
+{
+  "_id": {
+    "$oid": "68d6e7cc583defaf0fb892d2"
+  },
+  "user_id": {
+    "$numberLong": "7068497864"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "OG",
+  "username": "USDTRETAIL"
+},
+{
+  "_id": {
+    "$oid": "68d76ea2d9b6c7bb0814aaa1"
+  },
+  "user_id": {
+    "$numberLong": "6204872199"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "сейчас Маурa",
+  "username": "It_was_abhi"
+},
+{
+  "_id": {
+    "$oid": "68d77dfcd9b6c7bb0814ab55"
+  },
+  "user_id": 1398824036,
+  "amount": 600,
+  "count": 1,
+  "name": "se͢͢∂𝕝y𝖋 SPAT",
+  "username": "Vipali193_xd"
+},
+{
+  "_id": {
+    "$oid": "68d77dfcd9b6c7bb0814ab56"
+  },
+  "user_id": {
+    "$numberLong": "5702806856"
+  },
+  "amount": 600,
+  "count": 1,
+  "name": "Matlabi Duniya 🌍🌍",
+  "username": "Matlabiduniya121"
+},
+{
+  "_id": {
+    "$oid": "68d77e62d9b6c7bb0814ab58"
+  },
+  "user_id": {
+    "$numberLong": "5470156807"
+  },
+  "amount": 894,
+  "count": 2,
+  "name": "HAWK",
+  "username": "shashikant_1"
+},
+{
+  "_id": {
+    "$oid": "68d7e6c1d9b6c7bb0814af12"
+  },
+  "user_id": {
+    "$numberLong": "6821890986"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Freedom",
+  "username": "freedomfighter_007"
+},
+{
+  "_id": {
+    "$oid": "68d7f6bbd9b6c7bb0814afa1"
+  },
+  "user_id": {
+    "$numberLong": "8339958434"
+  },
+  "amount": 538,
+  "count": 1,
+  "name": "Andrew",
+  "username": "xhotdeals"
+},
+{
+  "_id": {
+    "$oid": "68d80cd3d9b6c7bb0814b0b9"
+  },
+  "user_id": {
+    "$numberLong": "8147270947"
+  },
+  "amount": 1000,
+  "count": 1,
+  "name": "VICTOR",
+  "username": "VICT0RO7"
+},
+{
+  "_id": {
+    "$oid": "68d81ad6d9b6c7bb0814b155"
+  },
+  "user_id": {
+    "$numberLong": "5586091174"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Daddy",
+  "username": "Broken283"
+},
+{
+  "_id": {
+    "$oid": "68d81b8ed9b6c7bb0814b159"
+  },
+  "user_id": {
+    "$numberLong": "7522179260"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Darkkyc👾",
+  "username": "Darkkyc"
+},
+{
+  "_id": {
+    "$oid": "68d888d9d9b6c7bb0814b364"
+  },
+  "user_id": {
+    "$numberLong": "7557963275"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Denil",
+  "username": "DenilDanDsouza"
+},
+{
+  "_id": {
+    "$oid": "68d8dab5d9b6c7bb0814b640"
+  },
+  "user_id": {
+    "$numberLong": "8208824248"
+  },
+  "amount": 0,
+  "count": 0,
+  "name": "Vaibhav",
+  "username": "VaibhavAL"
+},
+{
+  "_id": {
+    "$oid": "68d8edd0d9b6c7bb0814b6c8"
+  },
+  "user_id": {
+    "$numberLong": "6455588062"
+  },
+  "amount": 160,
+  "count": 1,
+  "name": "Hanzo Op ™",
+  "username": "hanzoforeyou"
+}]

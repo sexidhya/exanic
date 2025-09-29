@@ -53,6 +53,13 @@ cancel.register(client)
 mkick.register(client)
 eday.register(client)
 gday.register(client)
+import logging
+logging.basicConfig(level=logging.INFO)
+
+import rank_cmd , info_cmd
+info_cmd.register(client)
+rank_cmd.register(client)
+
 
 # --------- helpers
 async def require_reply_to_form(event: events.NewMessage.Event) -> Message:
@@ -596,22 +603,6 @@ async def shift_cmd(event):
         f"**Total Fees** - {new_deal['fee']:.2f}$\n\n"
         f"**{new_deal['amount']:.2f}$ to be released!**"
     )
-
-
-# --------- /rank
-@client.on(events.NewMessage(pattern=r"^/rank$"))
-async def rank_cmd(event):
-    top = await get_top20_by_volume(db)
-    if not top:
-        await event.respond("No deals found yet."); return
-    lines = ["🏆 Top 20 by Escrowed Volume"]
-    prev = None; dense = 0
-    for doc in top:
-        vol = float(doc.get("total_volume") or 0)
-        if prev is None or vol < prev: dense += 1; prev = vol
-        uname = doc.get("_id") or "unknown"; handle = f"@{uname}"
-        lines.append(f"{dense:>2}. {handle} — ${vol:.2f}")
-    await event.respond("\n".join(lines))
 
 # --------- /info (global rank by volume)
 
