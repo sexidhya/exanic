@@ -524,7 +524,7 @@ log_text = (
     f"**Total Worth:** {total:.2f}\\$\n"
     f"**Total Escrows:** {count}\n\n"
     f"**By @Exanic**"
-)
+))
 
     try:
         await client.send_message(LOG_CHANNEL_ID, log_text , parse_mode="md")
