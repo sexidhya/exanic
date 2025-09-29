@@ -8,7 +8,7 @@ MONGO_URI = "mongodb+srv://exanic:exanic@cluster0.v2sz6yh.mongodb.net"
 DB_NAME = "ExanicNew"
 OWNER_ID = 8145806296
 ESCROW_GROUP_IDS = {"-1002248727398": True , "-1002676048878": True , "-4885554031":True}
-LOG_CHANNEL_ID = -1003131289956
+LOG_CHANNEL_ID = -1002747246243
 
 
-FOOTER_INFO_DATE = "💡 Data Recorded from 30/08/2025 20:00 IST"
+FOOTER_INFO_DATE = "💡 Data Recorded from 29/09/2025 20:00 IST"
