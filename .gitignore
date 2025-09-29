@@ -30,3 +30,5 @@ Thumbs.db
 
 # Redis dump files (if any)
 dump.rdb
+*.session
+*.session-journal
