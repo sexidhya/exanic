@@ -512,16 +512,20 @@ async def close_cmd(event):
     # ---- LOGGING PART ----
     total, count, _ = await global_stats(db)   # total worth & escrows
     log_text = (
-        f"**✅ Escrow Deal-Done!**\n\n"
-        f"**ID** - `{deal_id}`\n"
-        f"**Escrower** - {escrower}\n"
-        f"**Buyer** - {buyer}\n"
-        f"**Seller** - {seller}\n"
-        f"**Amount** - {release_amount:.2f}$\n"
-        f"**Total Worth:** {total:.2f}$\n"
-        f"**Total Escrows:** {count}\n\n"
-        f"**By @Exanic**"
-    )
+       from telethon.utils import escape_md
+
+log_text = (
+    f"**✅ Escrow Deal-Done!**\n\n"
+    f"**ID** - `{deal_id}`\n"
+    f"**Escrower** - {escape_md(str(escrower))}\n"
+    f"**Buyer** - {escape_md(str(buyer))}\n"
+    f"**Seller** - {escape_md(str(seller))}\n"
+    f"**Amount** - {release_amount:.2f}\\$\n"
+    f"**Total Worth:** {total:.2f}\\$\n"
+    f"**Total Escrows:** {count}\n\n"
+    f"**By @Exanic**"
+)
+
     try:
         await client.send_message(LOG_CHANNEL_ID, log_text , parse_mode="md")
     except Exception as e:
@@ -660,9 +664,9 @@ async def gstats_cmd(event):
     total, count, avg = await global_stats(db)
     await event.respond(
         "📊 **Global Statistics:**\n\n"
-        f"💸 **Total Amount:** $**{total:.2f}\n"
-        f"📢 **Total Escrows:** {count}\n"
-        f"🔰 **Average Amount:** ${avg:.2f}\n\n"
+        f"💸 **Total Amount:** ${total:.2f}\n"
+        f"📢 **Total Escrows**: {count}\n"
+        f"🔰 **Average Amount**: ${avg:.2f}\n\n"
         f"{FOOTER_INFO_DATE}"
     )
 
