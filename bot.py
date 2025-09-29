@@ -4,7 +4,8 @@ import traceback
 import sys
 import random
 import string
-from datetime import datetime,UTC
+from datetime import datetime, timezone
+UTC = timezone.utc
 from telethon import TelegramClient, events
 from telethon.tl.custom.message import Message
 
