@@ -88,7 +88,7 @@ def _display_name_from_entity(e) -> str:
 @client.on(events.NewMessage(pattern=r"^/start$"))
 async def start_cmd(event):
     await ensure_indexes()
-    await event.respond("👋 Escrow Bot online. Use /help for commands.")
+    await event.respond("I am a Basic Escrow Tracker and Logger for @Exanic!\n Developed by Owner @Xeborn.")
 
 @client.on(events.NewMessage(pattern=r"^/help$"))
 async def help_cmd(event):
@@ -358,7 +358,7 @@ async def add_cmd(event: events.NewMessage.Event):
         f"**ID** - `{deal_id}`\n"
         f"**Escrower** - {escrower_name}\n"
         f"**Seller** - @{seller_username}\n"
-        f"**Buye** - @{buyer_username}\n"
+        f"**Buyer** - @{buyer_username}\n"
         f"**Amount**- ${main_amount:.2f}\n"
         f"**Total Fees** - ${fee:.2f}\n\n"
         f"**${release_amt:.2f} to be released!**"
@@ -504,7 +504,7 @@ async def close_cmd(event):
 
     # announce in chat
     await event.respond(
-        f"✔ Deal {deal_id} has been closed!\n"
+        f"✅Deal `{deal_id}` has been closed!\n"
         f"~ @{buyer_open} and @{seller_open} are requested to drop the vouch before leave.\n\n"
         f"`Vouch @Exanic for ${release_amount:.1f} deal, safely escrowed.`"
     )
@@ -512,18 +512,18 @@ async def close_cmd(event):
     # ---- LOGGING PART ----
     total, count, _ = await global_stats(db)   # total worth & escrows
     log_text = (
-        f"✅ Escrow Deal-Done!\n\n"
-        f"ID - `{deal_id}`\n"
-        f"Escrower - {escrower}\n"
-        f"Buyer - {buyer}\n"
-        f"Seller - {seller}\n"
-        f"Amount - {release_amount:.2f}$\n"
-        f"Total Worth: {total:.2f}$\n"
-        f"Total Escrows: {count}\n\n"
-        f"By @Exanic"
+        f"**✅ Escrow Deal-Done!**\n\n"
+        f"**ID** - `{deal_id}`\n"
+        f"**Escrower** - {escrower}\n"
+        f"**Buyer** - {buyer}\n"
+        f"**Seller** - {seller}\n"
+        f"**Amount** - {release_amount:.2f}$\n"
+        f"**Total Worth:** {total:.2f}$\n"
+        f"**Total Escrows:** {count}\n\n"
+        f"**By @Exanic**"
     )
     try:
-        await client.send_message(LOG_CHANNEL_ID, log_text , parse_mode=None)
+        await client.send_message(LOG_CHANNEL_ID, log_text , parse_mode="md")
     except Exception as e:
         print("[LOGGING ERROR]", e)
 
@@ -595,7 +595,7 @@ async def shift_cmd(event):
     await event.respond(
         f"🔄 Deal {old_deal_id} has been shifted!\n"
         f"**Escrow Deal**\n\n"
-        f"**ID** - `{new_deal_id}`\n"
+        f"**New ID** - `{new_deal_id}`\n"
         f"**Escrower**- {new_deal['escrower_name']}\n"
         f"**Seller** - @{new_deal['seller_username']}\n"
         f"**Buyer** - @{new_deal['buyer_username']}\n"
@@ -645,8 +645,8 @@ async def _upsert_user(db, uid: int | None, uname: str | None) -> None:
 # --------- /stats (owner)
 @client.on(events.NewMessage(pattern=r"^/stats$"))
 async def stats_cmd(event):
-    if not await is_owner(event.sender_id):
-        await event.respond("❌ Only owner can use this command.")
+    if not await is_escrower(event.sender_id):
+        await event.respond("❌ Only escrowers can use this command.")
         return
     holds = await escrower_holdings(db)
     lines = ["✅ Current Escrower-Wise Holdings:\n"]
@@ -659,18 +659,18 @@ async def stats_cmd(event):
 async def gstats_cmd(event):
     total, count, avg = await global_stats(db)
     await event.respond(
-        "📊 Global Statistics:\n\n"
-        f"💸 Total Escrowed Amount: ${total:.2f}\n"
-        f"📢 Total Escrows: {count}\n"
-        f"🔰 Average Escrow Amount: ${avg:.2f}\n\n"
+        "📊 **Global Statistics:**\n\n"
+        f"💸 **Total Amount:** $**{total:.2f}\n"
+        f"📢 **Total Escrows:** {count}\n"
+        f"🔰 **Average Amount:** ${avg:.2f}\n\n"
         f"{FOOTER_INFO_DATE}"
     )
 
 # --------- /fees (owner)
 @client.on(events.NewMessage(pattern=r"^/fees$"))
 async def fees_cmd(event):
-    if not await is_owner(event.sender_id):
-        await event.respond("❌ Only owner can use this command.")
+    if not await is_escrower(event.sender_id):
+        await event.respond("❌ Only escrowers can use this command.")
         return
     rows = await fees_by_escrower(db)
     if not rows:
