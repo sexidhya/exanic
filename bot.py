@@ -46,9 +46,13 @@ from utils.format import mask_name
 client = TelegramClient("escrow_bot", API_ID, API_HASH)
 
 # bot.py (after you define client)
-import dinfo , show
+import dinfo , show , cancel , mkick , eday , gday
 dinfo.register(client)
 show.register(client)
+cancel.register(client)
+mkick.register(client)
+eday.register(client)
+gday.register(client)
 
 # --------- helpers
 async def require_reply_to_form(event: events.NewMessage.Event) -> Message:
