@@ -72,7 +72,10 @@ async def _user_has_exanic_in_bio(client, username: str | None) -> bool:
 async def compute_fee(client, buyer_username: str, seller_username: str) -> float:
     b = await _user_has_exanic_in_bio(client, buyer_username)
     s = await _user_has_exanic_in_bio(client, seller_username)
-    return 1.0 if (b and s) else 2.0
+    if b and s:
+        return 1
+    else:
+        return 2    
 
 
 async def create_deal_from_form(

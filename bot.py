@@ -4,8 +4,10 @@ import traceback
 import sys
 import random
 import string
+import unicodedata
 from datetime import datetime, timezone
 UTC = timezone.utc
+from telethon.tl.functions.users import GetFullUserRequest
 from telethon import TelegramClient, events
 from telethon.tl.custom.message import Message
 
@@ -42,6 +44,11 @@ from utils.format import mask_name
 # (Starting happens inside main() on the same event loop.)
 # ------------------------------------------------------------------
 client = TelegramClient("escrow_bot", API_ID, API_HASH)
+
+# bot.py (after you define client)
+import dinfo , show
+dinfo.register(client)
+show.register(client)
 
 # --------- helpers
 async def require_reply_to_form(event: events.NewMessage.Event) -> Message:
@@ -192,24 +199,67 @@ def _display_name_from_entity(e) -> str:
         return f"@{username}"
     return str(getattr(e, "id", ""))  # last resort
 
+from telethon.tl.functions.users import GetFullUserRequest
 
-async def _user_has_exanic_in_bio(client, username: str) -> bool:
-    """Check if @exanic is in bio of given user (returns False if not accessible)."""
-    if not username:
+def _normalize_handle(u: str | None) -> str | None:
+    if not u:
+        return None
+    return u.strip().lstrip("@").lower()
+
+
+# Match @exanic as a standalone token (case-insensitive).
+# Allows optional '@' and word boundaries so 'mexanicon' won't match.
+_EXANIC_TOKEN = re.compile(r'(?<![A-Za-z0-9_])@?exanic(?![A-Za-z0-9_])', re.IGNORECASE)
+
+# Zero-width + BOM chars that can break matching when users copy/paste
+_ZW_CHARS = "".join([
+    "\u200B",  # ZERO WIDTH SPACE
+    "\u200C",  # ZERO WIDTH NON-JOINER
+    "\u200D",  # ZERO WIDTH JOINER
+    "\u2060",  # WORD JOINER
+    "\uFEFF",  # ZERO WIDTH NO-BREAK SPACE (BOM)
+])
+
+def _normalize_handle(u: str | None) -> str | None:
+    if not u:
+        return None
+    return u.strip().lstrip("@").lower()
+
+def _clean_text(s: str | None) -> str:
+    if not s:
+        return ""
+    # Normalize unicode and strip zero-width characters
+    s = unicodedata.normalize("NFKC", s)
+    return s.translate({ord(c): None for c in _ZW_CHARS})
+
+async def _user_has_exanic_in_bio(client, username: str | None) -> bool:
+    """
+    True iff the user's BIO contains '@exanic' (case-insensitive).
+    Robust to '@' missing, zero-width chars, unicode normalization.
+    """
+    handle = _normalize_handle(username)
+    if not handle:
         return False
     try:
-        entity = await client.get_entity(username)
-        full = await client(GetFullUserRequest(entity.id))
-        bio = (full.full_user.about or "").lower()
-        return "@exanic" in bio
+        entity = await client.get_entity(handle)
+        full = await client(GetFullUserRequest(entity))
+        about = getattr(getattr(full, "full_user", None), "about", "") or ""
+        about = _clean_text(about)
+        return bool(_EXANIC_TOKEN.search(about))
     except Exception:
+        # Username not found / privacy / transient error → treat as no badge
         return False
+
+
 
 
 async def compute_fee(client, buyer_username: str, seller_username: str) -> float:
     b = await _user_has_exanic_in_bio(client, buyer_username)
     s = await _user_has_exanic_in_bio(client, seller_username)
-    return 1.0 if (b and s) else 2.0
+    if b and s:
+        return 1
+    else:
+        return 2    
 
 
 @client.on(events.NewMessage(pattern=r"^/add\s+([0-9]+(\.[0-9]+)?)$"))
@@ -427,7 +477,7 @@ async def close_cmd(event):
         return
 
     remaining_before = float(deal.get("remaining", 0.0))
-    release_amount = min(max(close_amount, 0.0), remaining_before)
+    release_amount = close_amount
 
     await COL_DEALS.update_one(
         {"_id": deal["_id"]},
@@ -452,7 +502,7 @@ async def close_cmd(event):
     total, count, _ = await global_stats(db)   # total worth & escrows
     log_text = (
         f"✅ Escrow Deal-Done!\n\n"
-        f"ID - {deal_id}\n"
+        f"ID - `{deal_id}`\n"
         f"Escrower - {escrower}\n"
         f"Buyer - {buyer}\n"
         f"Seller - {seller}\n"
