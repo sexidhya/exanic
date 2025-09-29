@@ -12,7 +12,31 @@ def _new_deal_id() -> str:
     return "DL-" + "".join(random.choices(string.ascii_uppercase + string.digits, k=6))
 
 # Assume you defined these elsewhere
-# from deal_logic import _new_deal_id, _user_has_exanic_in_bio
+from telethon.tl.functions.users import GetFullUserRequest
+
+def _normalize_handle(u: str | None) -> str | None:
+    if not u:
+        return None
+    return u.strip().lstrip("@").lower()
+
+async def _user_has_exanic_in_bio(client, username: str | None) -> bool:
+    """
+    Returns True if the user's bio contains 'exanic' (case-insensitive).
+    Handles '@' prefix, whitespace, and missing bios safely.
+    """
+    handle = _normalize_handle(username)
+    if not handle:
+        return False
+    try:
+        # Resolve to an entity first; more forgiving than passing raw strings to the request
+        entity = await client.get_entity(handle)
+        full = await client(GetFullUserRequest(entity))
+        about = (getattr(full, "full_user", None) and full.full_user.about) or ""
+        return "exanic" in about.lower()
+    except Exception:
+        # Could be: username not found, privacy-restricted, temporary fetch error, etc.
+        return False
+
 
 
 async def compute_fee(client, buyer_username: str, seller_username: str) -> float:
