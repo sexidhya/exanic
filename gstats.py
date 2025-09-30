@@ -5,24 +5,27 @@ from motor.motor_asyncio import AsyncIOMotorDatabase
 BASE_TOTAL = 531_713.64
 BASE_COUNT = 797
 
+from typing import Tuple
+from motor.motor_asyncio import AsyncIOMotorDatabase
+from db import COL_DEALS
+
 async def global_stats(db: AsyncIOMotorDatabase) -> Tuple[float, int, float]:
-    """Return (total_volume, total_count, avg)."""
+    """Return (total_volume, total_count, avg) for CLOSED deals only (main_amount)."""
     pipeline = [
-        {
-            "$group": {
-                "_id": None,
-                "sum": {"$sum": {"$ifNull": ["$amount", 0]}},
-                "count": {"$sum": 1}
-            }
-        },
+        {"$match": {"status": "closed"}},
+        {"$group": {
+            "_id": None,
+            "sum": {"$sum": {"$ifNull": ["$main_amount", 0]}},
+            "count": {"$sum": 1}
+        }},
     ]
-    agg = [d async for d in db["deals"].aggregate(pipeline)]
+    agg = [d async for d in COL_DEALS.aggregate(pipeline)]
     if not agg:
-        # No deals in DB → just return baseline
-        return round(BASE_TOTAL, 2), BASE_COUNT, round(BASE_TOTAL / BASE_COUNT, 2)
+        return 0.0, 0, 0.0
 
-    total = float(agg[0].get("sum", 0.0)) + BASE_TOTAL
-    cnt = int(agg[0].get("count", 0)) + BASE_COUNT
+    total = float(agg[0].get("sum", 0.0))
+    cnt = int(agg[0].get("count", 0))
     avg = round(total / cnt, 2) if cnt else 0.0
-
     return round(total, 2), cnt, avg
+
+

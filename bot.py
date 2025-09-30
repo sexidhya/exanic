@@ -518,6 +518,7 @@ async def close_cmd(event):
     log_text = (
     f"✅Escrow Deal-Done!\n\n"
     f"ID - {deal_id}\n"
+    f"Escrower - {escrower}\n"
     f"Buyer - {buyer}\n"
     f"Seller - {seller}\n"
     f"Amount - {release_amount:.2f}$\n"
@@ -526,7 +527,7 @@ async def close_cmd(event):
     f"By @Exanic"
 )
 
-    await client.send_message(LOG_CHANNEL_ID, log_text, parse_mode=None)
+    await client.send_message(LOG_CHANNEL_ID, log_text)
 
 # --------- /shift (admins/owner), reply to NEW form
 
