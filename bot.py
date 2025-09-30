@@ -46,7 +46,8 @@ from utils.format import mask_name
 client = TelegramClient("escrow_bot", API_ID, API_HASH)
 
 # bot.py (after you define client)
-import dinfo , show , cancel , mkick , eday , gday
+import dinfo , show , cancel , mkick , eday , gday , close_cmd
+close_cmd.register(client)
 dinfo.register(client)
 show.register(client)
 cancel.register(client)
@@ -445,89 +446,10 @@ async def ext_cmd(event):
     # Acknowledge
     xd = new_remaining-1
     await event.respond(
-        f"✔ Extended {add_amt:.2f}$ to Deal {deal['deal_id']}\n"
-        f"New Hold: {new_main:.2f}$\n\n"
+        f"**Extended {add_amt:.2f}$ to Deal** {deal['deal_id']}\n"
+        f"**New Hold:** {new_main:.2f}$\n\n"
         f"~ {xd:.2f}$ to be released."
     )
-
-
-
-
-# --------- /close
-
-@client.on(events.NewMessage(pattern=r"^/close\s+([0-9]+(?:\.[0-9]+)?)$"))
-async def close_cmd(event):
-    if not await is_escrower(event.sender_id):
-        await event.respond("❌ Only escrowers can use /close.")
-        return
-    if not event.is_reply:
-        await event.respond("❌ Reply to the Escrow Deal card with /close <amount>.")
-        return
-
-    try:
-        close_amount = float(event.pattern_match.group(1))
-    except Exception:
-        await event.respond("❌ Invalid amount.")
-        return
-
-    card = await event.get_reply_message()
-    import re
-    m = re.search(r"\bID\s*-\s*(DL-[A-Z0-9]{6})\b", card.raw_text or "", flags=re.I)
-    if not m:
-        await event.respond("❌ Could not detect deal_id from the replied card.")
-        return
-    deal_id = m.group(1).upper()
-
-    deal = await COL_DEALS.find_one({
-        "deal_id": deal_id,
-        "escrower_id": event.sender_id,
-        "status": {"$in": ["pending", "active"]},
-    })
-    if not deal:
-        await event.respond("❌ Deal not found or already closed.")
-        return
-
-    remaining_before = float(deal.get("remaining", 0.0))
-    release_amount = close_amount
-
-    await COL_DEALS.update_one(
-        {"_id": deal["_id"]},
-        {"$inc": {"remaining": -release_amount},
-         "$set": {"status": "closed", "closed_at": datetime.now(UTC)}}
-    )
-
-    seller = mask_name(deal.get("seller_username") or "")
-    buyer  = mask_name(deal.get("buyer_username") or "")
-    seller_open = deal.get("seller_username") or ""
-    buyer_open  = deal.get("buyer_username") or ""
-    escrower = deal.get("escrower_name") or str(deal.get("escrower_id"))
-
-    # announce in chat
-    await event.respond(
-        f"✅Deal `{deal_id}` has been closed!\n"
-        f"~ @{buyer_open} and @{seller_open} are requested to drop the vouch before leave.\n\n"
-        f"`Vouch @Exanic for ${release_amount:.1f} deal, safely escrowed.`"
-    )
-
-    # ---- LOGGING PART ----
-    def escape_md(text: str) -> str:
-        escape_chars = r"\_*[]()~`>#+-=|{}.!"
-        return "".join(f"\\{c}" if c in escape_chars else c for c in str(text))
-
-    total, count, _ = await global_stats(db)   # total worth & escrows
-    log_text = (
-    f"✅Escrow Deal-Done!\n\n"
-    f"ID - {deal_id}\n"
-    f"Escrower - {escrower}\n"
-    f"Buyer - {buyer}\n"
-    f"Seller - {seller}\n"
-    f"Amount - {release_amount:.2f}$\n"
-    f"Total Worth: {total:.2f}$\n"
-    f"Total Escrows: {count}\n\n"
-    f"By @Exanic"
-)
-
-    await client.send_message(LOG_CHANNEL_ID, log_text)
 
 # --------- /shift (admins/owner), reply to NEW form
 
