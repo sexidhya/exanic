@@ -1,6 +1,7 @@
 # close_cmd.py
 from telethon import events
-from datetime import datetime, UTC
+from datetime import datetime, timezone
+UTC = timezone.utc
 from pymongo import ReturnDocument
 from typing import Union, Any
 import re

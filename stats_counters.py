@@ -1,5 +1,6 @@
 # stats_counters.py
-from datetime import datetime, timedelta, UTC
+from datetime import datetime, timezone
+UTC = timezone.utc
 from db import COL_COUNTS, COL_DEALS
 
 def _ist_bucket_utc(dt_utc: datetime) -> datetime:
