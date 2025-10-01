@@ -23,6 +23,13 @@ from gstats import global_stats
 from config import LOG_CHANNEL_ID
 from fees import fees_by_escrower
 from deal_logic import create_deal_from_form, recalc_amount_fields , compute_fee, _new_deal_id
+import re
+from datetime import datetime
+from telethon import events
+from telethon.tl.custom import Message
+
+from db import COL_USERS, COL_DEALS, COL_ESCROWERS
+
 
 
 
@@ -273,15 +280,15 @@ async def compute_fee(client, buyer_username: str, seller_username: str) -> floa
     else:
         return 2    
 
-
+#------------/add--------------------------
 @client.on(events.NewMessage(pattern=r"^/add\s+([0-9]+(\.[0-9]+)?)$"))
 async def add_cmd(event: events.NewMessage.Event):
-    # Only escrowers can /add
+    # 1) Only escrowers can /add
     if not await is_escrower(event.sender_id):
         await event.respond("❌ Only escrowers can use /add.")
         return
 
-    # /add must reply to a deal form message
+    # 2) Must reply to a deal form
     if not event.is_reply:
         await event.respond("❌ You must reply to a deal form with /add.")
         return
@@ -295,7 +302,7 @@ async def add_cmd(event: events.NewMessage.Event):
     form_msg: Message = await event.get_reply_message()
     text = form_msg.raw_text or ""
 
-    # Extract seller/buyer usernames from strict form
+    # 3) Extract seller/buyer
     seller_match = re.search(r"(?mi)^\s*Seller\s*-\s*@?([A-Za-z0-9_]{1,32})", text)
     buyer_match = re.search(r"(?mi)^\s*Buyer\s*-\s*@?([A-Za-z0-9_]{1,32})", text)
     seller_username = seller_match.group(1) if seller_match else None
@@ -305,67 +312,47 @@ async def add_cmd(event: events.NewMessage.Event):
         await event.respond("❌ Could not extract seller/buyer usernames from the form.")
         return
 
-    # Normalize
-    seller_username = seller_username.lower()
-    buyer_username = buyer_username.lower()
-
-    # Ensure users exist in users collection
-    await COL_USERS.update_one(
-        {"username": seller_username},
-        {"$setOnInsert": {"created_at": datetime.utcnow()}},
-        upsert=True,
-    )
-    await COL_USERS.update_one(
-        {"username": buyer_username},
-        {"$setOnInsert": {"created_at": datetime.utcnow()}},
-        upsert=True,
-    )
-
-    # Compute fee
-    fee = await compute_fee(event.client, buyer_username, seller_username)
-    total_amount = main_amount - fee
-
-    # Escrower display name
+    # 4) Escrower display name
     esc = await COL_ESCROWERS.find_one({"user_id": event.sender_id})
     if esc and esc.get("display_name"):
         escrower_name = esc["display_name"]
     else:
         sender = await event.get_sender()
-        escrower_name = _display_name_from_entity(sender)
+        escrower_name = sender.first_name or sender.username or str(sender.id)
 
-    # Create deal doc
-    deal_id = _new_deal_id()
-    deal = {
-        "deal_id": deal_id,
-        "escrower_id": event.sender_id,
-        "escrower_name": escrower_name,
-        "buyer_username": buyer_username,
-        "seller_username": seller_username,
-        "amount": float(main_amount),
-        "main_amount": float(main_amount),
-        "fee": float(fee),
-        "remaining": float(total_amount),
-        "status": "active",
-        "created_at": datetime.utcnow(),
-        "form_chat_id": getattr(form_msg.chat, "id", None),
-        "form_message_id": form_msg.id,
-    }
-    await COL_DEALS.insert_one(deal)
+    # 5) Create deal (deal_logic handles DB + fee)
+    deal = await create_deal_from_form(
+        client=event.client,
+        form_message=form_msg,
+        escrower_id=event.sender_id,
+        escrower_name=escrower_name,
+        buyer_username=buyer_username,
+        seller_username=seller_username,
+        main_amount=main_amount,
+    )
 
-    # Build and send Escrow Deal card
-    release_amt = total_amount  # amount to be released (without fee)
+    # 6) Calculate net release amount
+    release_amt = deal["main_amount"] - deal["fee"]
+
+    # 7) Escrow card (reply under the form)
     card = (
         f"**Escrow Deal**\n\n"
-        f"**ID** - `{deal_id}`\n"
-        f"**Escrower** - {escrower_name}\n"
-        f"**Seller** - @{seller_username}\n"
-        f"**Buyer** - @{buyer_username}\n"
-        f"**Amount**- ${main_amount:.2f}\n"
-        f"**Total Fees** - ${fee:.2f}\n\n"
+        f"**ID** - `{deal['deal_id']}`\n"
+        f"**Escrower** - {deal['escrower_name']}\n"
+        f"**Seller** - @{deal['seller_username']}\n"
+        f"**Buyer** - @{deal['buyer_username']}\n"
+        f"**Amount** - ${deal['main_amount']:.2f}\n"
+        f"**Total Fees** - ${deal['fee']:.2f}\n\n"
         f"**${release_amt:.2f} to be released!**"
     )
-    await event.respond(card)
 
+    await form_msg.reply(card)
+
+    # 8) Delete the /add command
+    try:
+        await event.delete()
+    except Exception:
+        pass
 
 # --------- helpers to get current deal from a card reply
 async def deal_from_card_reply(event):
@@ -381,23 +368,46 @@ async def deal_from_card_reply(event):
 # --------- /cut
 @client.on(events.NewMessage(pattern=r"^/cut\s+(\d+(?:\.\d+)?)$"))
 async def cut_cmd(event):
+    # Only admins/owners can cut
     if not await is_admin_or_owner(event.sender_id):
-        await event.respond("❌ You are not allowed to use this command."); return
+        await event.respond("❌ You are not allowed to use this command.")
+        return
+
+    # Must reply to an Escrow Deal card
     deal = await deal_from_card_reply(event)
-    if not deal: await event.respond("❌ Reply to the Escrow Deal card to use this command."); return
+    if not deal:
+        await event.respond("❌ Reply to the Escrow Deal card to use this command.")
+        return
+
     if deal.get("status") == "closed":
-        await event.respond("❌ This deal is already closed."); return
+        await event.respond("❌ This deal is already closed.")
+        return
+
+    # Parse cut amount
     cut_amt = float(event.pattern_match.group(1))
-    remaining = float(deal.get("remaining",0.0))
+
+    # Remaining is always tracked against main_amount (the escrow pool)
+    remaining = float(deal.get("remaining", 0.0))
     if cut_amt > remaining:
-        await event.respond(f"❌ Cut exceeds remaining hold. Remaining: {remaining}$"); return
-    remaining -= cut_amt
-    await COL_DEALS.update_one({"_id": deal["_id"]}, {"$set": {"remaining": remaining}})
-    amt_disp, rem2, release = await recalc_amount_fields({**deal, "remaining": remaining})
+        await event.respond(f"❌ Cut exceeds remaining hold. Remaining: {remaining:.2f}$")
+        return
+
+    # Deduct from remaining
+    new_remaining = remaining - cut_amt
+    await COL_DEALS.update_one(
+        {"_id": deal["_id"]},
+        {"$set": {"remaining": new_remaining}}
+    )
+
+    # Release amount is just the remaining escrow pool (main_amount - cuts)
+    fee = float(deal.get("fee", 0.0))
+    release_amount = round(new_remaining, 2) - fee
+
+    # Build reply
     await event.respond(
-        f"✔ Cut {cut_amt}$ from Deal {deal['deal_id']} \n"
-        f"Remaining Hold: {round(rem2,2)}$\n\n"
-        f"~ {round(release,2)}$ to be released"
+        f"✔ Cut {cut_amt:.2f}$ from Deal {deal['deal_id']}\n"
+        f"Remaining Hold: {new_remaining:.2f}$\n\n"
+        f"~ {release_amount:.2f}$ to be released"
     )
 
 @client.on(events.NewMessage(pattern=r"^/ext\s+(\d+(?:\.\d+)?)$"))
