@@ -1,7 +1,7 @@
 # db.py
 from __future__ import annotations
-
-from datetime import datetime, UTC, date
+from datetime import datetime, timezone, date
+UTC = timezone.utc
 from typing import Iterable, List, Tuple, Any, Optional
 
 from motor.motor_asyncio import (
