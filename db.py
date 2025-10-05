@@ -321,3 +321,100 @@ async def increment_counters_for_closed(deal: dict, *, amount_field: str = "main
         await inc_counts_escrower_daily(amount, escrower_id, when)
     finally:
         await session.end_session()
+
+# db.py  (patched additions at bottom)
+
+# ... keep your entire existing code above unchanged ...
+
+# -----------------------------------------------------------------------------
+# FEES COLLECTION — dedicated collection for manual/admin-managed fee records
+# -----------------------------------------------------------------------------
+COL_FEES: AsyncIOMotorCollection = db["fees"]
+
+async def ensure_fees_indexes() -> None:
+    """Ensure indexes for the fees collection."""
+    info = await COL_FEES.index_information()
+    models: List[IndexModel] = []
+    if not _has_equivalent_index(info, key=[("admin_id", ASCENDING)]):
+        models.append(IndexModel([("admin_id", ASCENDING)], name="fees_admin_id"))
+    if not _has_equivalent_index(info, key=[("name", ASCENDING)]):
+        models.append(IndexModel([("name", ASCENDING)], name="fees_name"))
+    await _create_indexes_safely(COL_FEES, models)
+
+# extend ensure_indexes() to call it
+_old_ensure_indexes = ensure_indexes
+async def ensure_indexes() -> None:
+    await _old_ensure_indexes()
+    await ensure_fees_indexes()
+
+# -----------------------------------------------------------------------------
+# CRUD HELPERS (async)
+# -----------------------------------------------------------------------------
+async def create_fee_record(admin_id: int, fee: float, name: str) -> dict:
+    doc = {
+        "admin_id": int(admin_id),
+        "fee": float(fee),
+        "name": str(name),
+        "created_at": datetime.now(UTC),
+    }
+    res = await COL_FEES.insert_one(doc)
+    doc["_id"] = str(res.inserted_id)
+    return doc
+
+async def get_fee_record(fee_id: str) -> Optional[dict]:
+    from bson import ObjectId
+    try:
+        oid = ObjectId(fee_id)
+    except Exception:
+        return None
+    doc = await COL_FEES.find_one({"_id": oid})
+    if doc:
+        doc["_id"] = str(doc["_id"])
+    return doc
+
+async def list_fee_records(limit: int = 50, skip: int = 0) -> List[dict]:
+    cursor = COL_FEES.find().sort("created_at", -1).skip(skip).limit(limit)
+    result = []
+    async for d in cursor:
+        d["_id"] = str(d["_id"])
+        result.append(d)
+    return result
+
+async def list_fees_by_admin(admin_id: int) -> List[dict]:
+    cursor = COL_FEES.find({"admin_id": int(admin_id)}).sort("created_at", -1)
+    result = []
+    async for d in cursor:
+        d["_id"] = str(d["_id"])
+        result.append(d)
+    return result
+
+async def update_fee_record(fee_id: str, updates: dict) -> Optional[dict]:
+    from bson import ObjectId
+    try:
+        oid = ObjectId(fee_id)
+    except Exception:
+        return None
+    allowed = {}
+    if "fee" in updates:
+        allowed["fee"] = float(updates["fee"])
+    if "name" in updates:
+        allowed["name"] = str(updates["name"])
+    if not allowed:
+        return await get_fee_record(fee_id)
+    doc = await COL_FEES.find_one_and_update(
+        {"_id": oid},
+        {"$set": allowed},
+        return_document=ReturnDocument.AFTER
+    )
+    if doc:
+        doc["_id"] = str(doc["_id"])
+    return doc
+
+async def delete_fee_record(fee_id: str) -> bool:
+    from bson import ObjectId
+    try:
+        oid = ObjectId(fee_id)
+    except Exception:
+        return False
+    res = await COL_FEES.delete_one({"_id": oid})
+    return res.deleted_count == 1

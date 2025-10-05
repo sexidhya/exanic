@@ -64,9 +64,10 @@ gday.register(client)
 import logging
 logging.basicConfig(level=logging.INFO)
 
-import rank_cmd , info_cmd
+import rank_cmd , info_cmd , fee_cmd
 info_cmd.register(client)
 rank_cmd.register(client)
+fee_cmd.register(client)
 
 
 # --------- helpers
