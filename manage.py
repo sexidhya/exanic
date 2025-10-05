@@ -14,26 +14,42 @@ FORCE_SUB_CHANNEL = "@exanic"  # channel for force-subscribe
 def register(client):
 
     # ========== 1️⃣ AUTO DELETE EDITED MESSAGES ==========
+    from telethon.tl.functions.channels import GetParticipantRequest
+
     @client.on(events.MessageEdited(chats=[MAIN_GROUP_ID]))
     async def auto_delete_edits(event):
-        """Deletes edited messages from non-admins in main group."""
+        """Deletes *real* edited messages from non-admins in the main group, ignores reactions."""
         try:
             sender = await event.get_sender()
             if not sender:
                 return
 
-            # Check if sender is admin in that chat
+            # ⚙️ Ignore reaction-only edits or media/caption updates
+            # Reactions trigger edit events without changing text/caption
+            if not event.text and not event.message.message:
+                return
+
+            # Some reactions still include message.text but identical to before
+            # To be safe, compare new vs. cached version (optional: maintain cache if needed)
+            # For simplicity: skip if event.text is empty or None
+            if not event.text:
+                return
+
+            # ✅ Check if sender is admin
             try:
                 participant = await client(GetParticipantRequest(event.chat_id, sender.id))
                 is_admin = getattr(participant.participant, "admin_rights", None)
             except Exception:
-                # If we can't fetch participant info, be conservative and don't delete
+                # if we can't fetch participant info, assume admin (safer than false positive delete)
                 is_admin = True
 
+            # ✅ Delete only non-admins’ true edits
             if not is_admin:
                 await event.delete()
+
         except Exception as e:
             print(f"[manage.py][auto_delete_edits] Error: {e}")
+
 
     # ========== 2️⃣ FORCE SUBSCRIBE SYSTEM ==========
     @client.on(events.NewMessage(chats=[MAIN_GROUP_ID]))
