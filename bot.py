@@ -641,20 +641,24 @@ async def _upsert_user(db, uid: int | None, uname: str | None) -> None:
             upsert=True,
         )
 
+import asyncio
 from telethon import events, Button
 from telethon.tl.functions.channels import GetParticipantRequest, EditBannedRequest
 from telethon.tl.types import ChatBannedRights
-import asyncio
+from config import ESCROW_GROUP_IDS  # import your escrow group list/dict
 
-KICK_DELAY = 0.7  # seconds between kicks to avoid floodwaits
+KICK_DELAY = 0.7  # seconds between each kick to avoid FloodWait
 
 @client.on(events.NewMessage(pattern=r"^/kickall$", incoming=True))
 async def kickall_request(event):
-    if not (event.is_group or event.is_channel):
-        await event.reply("⚠️ This command must be used in a group.")
+    chat_id = str(event.chat_id)
+
+    # ✅ Allow only escrow groups
+    if chat_id not in ESCROW_GROUP_IDS:
+        await event.reply("⚠️ This command is only available in escrow groups.")
         return
 
-    # Check if user is admin
+    # ✅ Check if user is admin
     try:
         part = await client(GetParticipantRequest(event.chat_id, event.sender_id))
         is_admin = getattr(part.participant, "admin_rights", None)
@@ -665,23 +669,33 @@ async def kickall_request(event):
         await event.reply(f"Cannot verify admin: {e}")
         return
 
-    # Send confirmation buttons
+    # ✅ Confirmation buttons
     keyboard = [
-        [Button.inline("✅ Confirm Kick All", data=f"kickall_confirm:{event.sender_id}"),
-         Button.inline("❌ Cancel", data=f"kickall_cancel:{event.sender_id}")]
+        [Button.inline("✅ Confirm Kick All", data=f"kickall_confirm:{event.sender_id}:{chat_id}"),
+         Button.inline("❌ Cancel", data=f"kickall_cancel:{event.sender_id}:{chat_id}")]
     ]
-    await event.reply("⚠️ **Are you sure you want to kick all non-admins?**", buttons=keyboard)
+    await event.reply("⚠️ **Are you sure you want to kick all non-admins in this escrow group?**", buttons=keyboard)
 
 
 @client.on(events.CallbackQuery(pattern=b"kickall_"))
 async def kickall_callback(event):
-    data = event.data.decode().split(":")
-    action = data[0]
-    sender_id = int(data[1])
+    try:
+        data = event.data.decode().split(":")
+        action = data[0]
+        sender_id = int(data[1])
+        chat_id = data[2]
+    except Exception:
+        await event.answer("Malformed data.", alert=True)
+        return
 
-    # Only allow the command initiator to confirm/cancel
+    # ✅ Allow only the initiator
     if event.sender_id != sender_id:
         await event.answer("Not your confirmation button!", alert=True)
+        return
+
+    # ✅ Ensure chat is escrow group
+    if chat_id not in ESCROW_GROUP_IDS:
+        await event.answer("This command is not allowed here.", alert=True)
         return
 
     if action == "kickall_cancel":
@@ -689,42 +703,34 @@ async def kickall_callback(event):
         return
 
     if action == "kickall_confirm":
-        await event.edit("🚨 Kicking all non-admin members... this may take time.")
-
+        await event.edit("🚨 Kicking all non-admin members... please wait.")
         kicked, failed = 0, 0
         ban_rights = ChatBannedRights(until_date=None, view_messages=True)
         me = await client.get_me()
 
-        async for member in client.iter_participants(event.chat_id):
+        async for member in client.iter_participants(int(chat_id)):
             try:
-                # skip bot itself
-                if member.id == me.id:
+                # Skip bot, sender, and admins
+                if member.id in (me.id, sender_id):
                     continue
-                # skip the admin who confirmed
-                if member.id == sender_id:
-                    continue
-
-                # skip admins
                 try:
-                    p = await client(GetParticipantRequest(event.chat_id, member.id))
+                    p = await client(GetParticipantRequest(int(chat_id), member.id))
                     if getattr(p.participant, "admin_rights", None):
                         continue
                 except Exception:
                     continue
 
                 try:
-                    await client.kick_participant(event.chat_id, member.id)
+                    await client.kick_participant(int(chat_id), member.id)
                 except Exception:
-                    # fallback if method not allowed in some chats
                     try:
-                        await client(EditBannedRequest(event.chat_id, member.id, ban_rights))
+                        await client(EditBannedRequest(int(chat_id), member.id, ban_rights))
                     except Exception:
                         failed += 1
                         continue
 
                 kicked += 1
                 await asyncio.sleep(KICK_DELAY)
-
             except Exception:
                 failed += 1
                 await asyncio.sleep(KICK_DELAY)
