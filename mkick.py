@@ -10,7 +10,7 @@ def register(client):
     async def mkick_handler(event):
         # ✅ Restriction check
         if not await is_escrower(event.sender_id):
-            await event.reply("⛔ You are not authorized to use this command.")
+            await event.reply("⛔You are not authorized to use this command.")
             return
 
         if not event.is_group:
