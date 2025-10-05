@@ -18,7 +18,7 @@ def register(client):
             return
 
         args = event.pattern_match.group(1)
-        usernames = [u.strip().lstrip("@") for u in args.split(" ") if u.strip()]
+        usernames = [u.strip().lstrip("@") for u in args.split(",") if u.strip()]
 
         if not usernames:
             await event.reply("⚠️ No valid usernames provided.")
