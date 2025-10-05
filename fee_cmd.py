@@ -79,13 +79,13 @@ def register(client):
             return await event.respond(f"💼 {sender_name}, you have no recorded fees yet.")
 
         total_fee = sum(float(d.get("fee", 0)) for d in rows)
-        lines = [f"💼 **Fees for {sender_name}** • Total → ${total_fee:.2f}\n"]
+        lines = [f"💼 **Fees for {sender_name}**\n **Total** → ${total_fee:.2f}"]
 
         # List all individual records
         for d in rows:
             deal_label = d.get("name", "Unnamed Deal")
             fee_value = float(d.get("fee", 0))
-            lines.append(f"• {deal_label} — ${fee_value:.2f}")
+            lines.append(f" ")
 
         await event.respond("\n".join(lines))
 
@@ -143,7 +143,7 @@ def register(client):
             uid = r.get("admin_id")
             total = float(r.get("total", 0.0))
             deals = int(r.get("deals", 0)) 
-            lines.append(f"{name} ({uid}) → ${total:.2f}")
+            lines.append(f"{name} → ${total:.2f}")
         await event.respond("\n".join(lines))
 
 

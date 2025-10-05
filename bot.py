@@ -91,11 +91,74 @@ def _display_name_from_entity(e) -> str:
     return str(getattr(e, "id", ""))  # last resort
 
 
-# --------- basic
+from telethon import events, Button
+import requests
+from io import BytesIO
+
+# === CONFIG ===
+MAIN_GROUP_LINK = "https://t.me/Exanic"
+DEV_PROFILE = "https://t.me/Xeborn"
+VOUCH_CHANNEL = "https://t.me/vouchhats"
+LOGS_CHANNEL = "https://t.me/Strawhatsescrowlogs"
+IMAGE_URL = "https://envs.sh/zpH.png"
+
 @client.on(events.NewMessage(pattern=r"^/start$"))
 async def start_cmd(event):
+    if not event.is_private:
+        return  # ignore groups/channels
+
     await ensure_indexes()
-    await event.respond("I am a Basic Escrow Tracker and Logger for @Exanic!\n Developed by Owner @Xeborn.")
+
+    caption = (
+        "**strawHats Manager Welcomes You!**\n\n"
+        "I am an Escrow Tracker and Logger for strawHats — one of the "
+        "largest and most trusted escrow platforms on Telegram for Indians."
+    )
+
+    keyboard = [
+        [
+            Button.url("Exanic", MAIN_GROUP_LINK),
+            Button.url("Logs", LOGS_CHANNEL),
+            Button.url("Vouches", VOUCH_CHANNEL)
+        ],
+        [
+            Button.url("Developer", DEV_PROFILE),
+            Button.inline("Close", b"close")
+        ]
+    ]
+
+    try:
+        # Download the image into memory (preserves resolution)
+        response = requests.get(IMAGE_URL, timeout=10)
+        if response.status_code != 200:
+            raise Exception(f"HTTP {response.status_code}")
+        image_stream = BytesIO(response.content)
+        image_stream.name = "start_image.png"  # Telethon needs a filename
+
+        # Send with full quality (as document)
+        await event.respond(
+            caption,
+            file=image_stream,
+            buttons=keyboard,
+            parse_mode="markdown",
+            force_document=False
+        )
+        image_stream.close()
+
+    except Exception as e:
+        print(f"Unable to send the start image. Error: {e}")
+        await event.respond("⚠️ Failed to load start image. Please try again later.")
+
+
+# === INLINE CALLBACK HANDLER ===
+@client.on(events.CallbackQuery)
+async def callback_handler(event):
+    if event.data == b"close":
+        try:
+            await event.edit(buttons=None)
+            await event.answer("Closed.", alert=False)
+        except Exception:
+            await event.answer("Closed.", alert=False)
 
 @client.on(events.NewMessage(pattern=r"^/help$"))
 async def help_cmd(event):
@@ -119,6 +182,9 @@ async def help_cmd(event):
 # --------- /escrowers, /admin, /unadmin
 @client.on(events.NewMessage(pattern=r"^/escrowers$"))
 async def escrowers_cmd(event):
+    if not await is_escrower(event.sender_id):
+        await event.respond("❌ Only escrowers can use this command.")
+        return
     cur = COL_ESCROWERS.find()
     escrowers = [e async for e in cur]
     if not escrowers:
@@ -128,7 +194,7 @@ async def escrowers_cmd(event):
     for e in escrowers:
         disp = e.get("display_name") or str(e.get("user_id"))
         limit = e.get("limit", 0)
-        lines.append(f"• {disp} ({e.get('user_id')}) • Limit → {int(limit) if float(limit).is_integer() else limit}$")
+        lines.append(f"• {disp} ({e.get('user_id')})")
     await event.respond("\n".join(lines))
 
 @client.on(events.NewMessage(pattern=r"^/admin\s+(\d+)\s+(\d+(?:\.\d+)?)$"))
@@ -364,7 +430,7 @@ async def deal_from_card_reply(event):
     deal = await COL_DEALS.find_one({"deal_id": deal_id})
     return deal
 
-# --------- /cut
+# --------- /cut-----------------------------------------
 @client.on(events.NewMessage(pattern=r"^/cut\s+(\d+(?:\.\d+)?)$"))
 async def cut_cmd(event):
     # Only admins/owners can cut
@@ -404,9 +470,9 @@ async def cut_cmd(event):
 
     # Build reply
     await event.respond(
-        f"✔ Cut {cut_amt:.2f}$ from Deal {deal['deal_id']}\n"
-        f"Remaining Hold: {new_remaining:.2f}$\n\n"
-        f"~ {release_amount:.2f}$ to be released"
+        f"**Cut {cut_amt:.2f}$ from Deal** `{deal['deal_id']}`\n"
+        f"**Remaining Hold:** {new_remaining:.2f}$\n\n"
+        f"~ {release_amount:.2f}$ **to be released**"
     )
 
 @client.on(events.NewMessage(pattern=r"^/ext\s+(\d+(?:\.\d+)?)$"))
@@ -590,6 +656,9 @@ async def stats_cmd(event):
 # --------- /gstats (everyone)
 @client.on(events.NewMessage(pattern=r"^/gstats$"))
 async def gstats_cmd(event):
+    if not await is_owner(event.sender_id):
+        await event.respond("❌ Only owner can use this command.")
+        return
     total, count, avg = await global_stats(db)
     await event.respond(
         "📊 **Global Statistics:**\n\n"

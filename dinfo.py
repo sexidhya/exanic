@@ -33,6 +33,10 @@ async def _resolve_user(client, arg: str, fallback_sender):
 def register(client):
     @client.on(events.NewMessage(pattern=r'^/dinfo(?:\s+(\S+))?'))
     async def dinfo_handler(event):
+        if not await is_escrower(event.sender_id):
+            await event.respond("❌ Only escrowers can use this command.")
+            return
+
         arg = event.pattern_match.group(1)
         uid, esc_name = await _resolve_user(event.client, arg, event.sender_id)
 
@@ -48,14 +52,14 @@ def register(client):
 
         # Build response
         lines = []
-        lines.append(f"📊 Deals Info for {esc_name}")
+        lines.append(f"**📊 Deals Info for** {esc_name}")
         lines.append("")
-        lines.append(f"➥ User ID: {uid}")
-        lines.append(f"➥ Total Hold: {total_hold:.1f}$")
+        lines.append(f"**User ID:** {uid}")
+        lines.append(f"**Total Hold:** {total_hold:.1f}$")
         lines.append("")
-        lines.append("➥ Deals:" if deals else "➥ Deals: None")
+        lines.append("**Deals:**" if deals else "No Active Deals")
 
         for deal_id, amt in deals:
-            lines.append(f"~ Deal ID: `{deal_id}` → {amt:.1f}$")
+            lines.append(f"**~ Deal ID:** `{deal_id}` → {amt:.1f}$")
 
         await event.reply("\n".join(lines))
