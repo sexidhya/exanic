@@ -3,7 +3,7 @@ from flask import Flask, request
 import os, hmac, hashlib, subprocess, threading
 
 SECRET = b"mydeploytoken"  # must match webhook secret (if used)
-REPO_DIR = "C:\exanicbot"
+REPO_DIR = "/root/exanic"
 SESSION_NAME = "bot7"  # your tmux session name
 
 app = Flask(__name__)
