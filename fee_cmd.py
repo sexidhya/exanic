@@ -137,7 +137,7 @@ def register(client):
         rows = await fees_backend.totals_by_admin()
         if not rows:
             return await event.respond("No fees recorded yet.")
-        lines = ["💰 Fees Earned (All-Time):\n"]
+        lines = ["**Fees Earned (All-Time):**\n"]
         for r in rows:
             name = r.get("admin_name") or str(r.get("admin_id"))
             uid = r.get("admin_id")

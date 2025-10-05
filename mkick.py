@@ -10,7 +10,7 @@ def register(client):
     async def mkick_handler(event):
         # ✅ Restriction check
         if not await is_escrower(event.sender_id):
-            await event.reply("⛔You are not authorized to use this command.")
+            await event.reply("⛔ You are not authorized to use this command.")
             return
 
         if not event.is_group:
@@ -18,7 +18,7 @@ def register(client):
             return
 
         args = event.pattern_match.group(1)
-        usernames = [u.strip().lstrip("@") for u in args.split(" ") if u.strip()]
+        usernames = [u.strip().lstrip("@") for u in args.split(",") if u.strip()]
 
         if not usernames:
             await event.reply("⚠️ No valid usernames provided.")
