@@ -14,36 +14,45 @@ FORCE_SUB_CHANNEL = "@exanic"  # channel for force-subscribe
 def register(client):
 
     # ========== 1️⃣ AUTO DELETE EDITED MESSAGES ==========
+    from telethon import events
     from telethon.tl.functions.channels import GetParticipantRequest
+
+    # cache to remember original message text
+    _original_texts = {}
+
+    @client.on(events.NewMessage(chats=[MAIN_GROUP_ID]))
+    async def cache_original_message(event):
+        """Cache every new message's text so we can detect real edits later."""
+        if event.text:
+            _original_texts[event.id] = event.text
 
     @client.on(events.MessageEdited(chats=[MAIN_GROUP_ID]))
     async def auto_delete_edits(event):
-        """Deletes *real* edited messages from non-admins in the main group, ignores reactions."""
+        """Deletes *real* edited messages* (ignores reaction updates) from non-admins in main group."""
         try:
             sender = await event.get_sender()
             if not sender:
                 return
 
-            # ⚙️ Ignore reaction-only edits or media/caption updates
-            # Reactions trigger edit events without changing text/caption
-            if not event.text and not event.message.message:
+            # 🧠 Detect real edit vs reaction
+            old_text = _original_texts.get(event.id)
+            new_text = event.text or ""
+
+            # If text didn’t actually change → it’s a reaction or emoji update → ignore
+            if old_text == new_text:
                 return
 
-            # Some reactions still include message.text but identical to before
-            # To be safe, compare new vs. cached version (optional: maintain cache if needed)
-            # For simplicity: skip if event.text is empty or None
-            if not event.text:
-                return
+            # update cached text so next edit compares correctly
+            _original_texts[event.id] = new_text
 
-            # ✅ Check if sender is admin
+            # ✅ check if user is admin
             try:
                 participant = await client(GetParticipantRequest(event.chat_id, sender.id))
                 is_admin = getattr(participant.participant, "admin_rights", None)
             except Exception:
-                # if we can't fetch participant info, assume admin (safer than false positive delete)
-                is_admin = True
+                is_admin = True  # fail-safe: assume admin if we can’t fetch info
 
-            # ✅ Delete only non-admins’ true edits
+            # 🚫 delete only if non-admin
             if not is_admin:
                 await event.delete()
 
