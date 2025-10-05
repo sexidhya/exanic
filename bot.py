@@ -21,7 +21,6 @@ from info import build_info_card
 from holdings import escrower_holdings
 from gstats import global_stats
 from config import LOG_CHANNEL_ID
-from fees import fees_by_escrower
 from deal_logic import create_deal_from_form, recalc_amount_fields , compute_fee, _new_deal_id
 import re
 from datetime import datetime
@@ -43,7 +42,6 @@ from info import build_info_card
 from permissions import is_owner
 from holdings import escrower_holdings
 from gstats import global_stats
-from fees import fees_by_escrower
 from utils.format import mask_name
 
 # ------------------------------------------------------------------
@@ -600,23 +598,6 @@ async def gstats_cmd(event):
         f"🔰 **Average Amount**: ${avg:.2f}\n\n"
         f"{FOOTER_INFO_DATE}"
     )
-
-# --------- /fees (owner)
-@client.on(events.NewMessage(pattern=r"^/fees$"))
-async def fees_cmd(event):
-    if not await is_escrower(event.sender_id):
-        await event.respond("❌ Only escrowers can use this command.")
-        return
-    rows = await fees_by_escrower(db)
-    if not rows:
-        await event.respond("No fees recorded yet.")
-        return
-    lines = ["💰 Fees Earned (All-time):\n"]
-    for r in rows:
-        name = r["_id"].get("escrower_name", "") or str(r["_id"].get("escrower_id", ""))
-        uid = r["_id"].get("escrower_id", "")
-        lines.append(f"{name} ({uid}) — ${float(r.get('total_fees', 0)):.2f} • {int(r.get('deals', 0))} deals")
-    await event.respond("\n".join(lines))
 
 # --------- main
 async def main():
