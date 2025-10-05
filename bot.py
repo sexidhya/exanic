@@ -111,7 +111,7 @@ async def start_cmd(event):
     await ensure_indexes()
 
     caption = (
-        "**strawHats Manager Welcomes You!**\n\n"
+        "** xd strawHats Manager Welcomes You!**\n\n"
         "I am an Escrow Tracker and Logger for strawHats — one of the "
         "largest and most trusted escrow platforms on Telegram for Indians."
     )
