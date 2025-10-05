@@ -16,19 +16,15 @@ from bson import ObjectId
 from db import COL_FEES, create_fee_record, list_fee_records, list_fees_by_admin, update_fee_record, delete_fee_record, db
 
 # ---------- Aggregation / summary helpers ----------
-
 async def totals_by_admin(limit: int = 0) -> List[Dict[str, Any]]:
     """
-    Return totals grouped by admin_id from the 'fees' collection.
-    Each item: { admin_id:int, admin_name:Optional[str], total:float, deals:int, legacy:0 }
-
-    Uses a Mongo aggregation (scales to large datasets).
-    If `limit` > 0, limits number of admins returned (after sorting by total desc).
+    Corrected aggregation: group by admin_id, use $first at top level to pick admin_name.
     """
     pipeline = [
         {
             "$group": {
-                "_id": {"admin_id": "$admin_id", "admin_name": {"$first": "$admin_name"}},
+                "_id": "$admin_id",
+                "admin_name": {"$first": "$admin_name"},
                 "total": {"$sum": {"$ifNull": ["$fee", 0]}},
                 "deals": {"$sum": 1},
             }
@@ -40,8 +36,8 @@ async def totals_by_admin(limit: int = 0) -> List[Dict[str, Any]]:
 
     out = []
     async for doc in COL_FEES.aggregate(pipeline):
-        admin_id = doc["_id"].get("admin_id")
-        admin_name = doc["_id"].get("admin_name")
+        admin_id = doc.get("_id")
+        admin_name = doc.get("admin_name")
         out.append({
             "admin_id": int(admin_id) if admin_id is not None else None,
             "admin_name": admin_name,
@@ -50,19 +46,13 @@ async def totals_by_admin(limit: int = 0) -> List[Dict[str, Any]]:
             "legacy": 0,
         })
     return out
-
-
 async def admin_summary(admin_id: int) -> Dict[str, Any]:
-    """
-    Return summary for a single admin_id based on fee records.
-    Shape: { admin_id, admin_name, total, deals, legacy }
-    """
-    # Use aggregation to compute quickly
     pipeline = [
         {"$match": {"admin_id": int(admin_id)}},
         {
             "$group": {
-                "_id": {"admin_id": "$admin_id", "admin_name": {"$first": "$admin_name"}},
+                "_id": "$admin_id",
+                "admin_name": {"$first": "$admin_name"},
                 "total": {"$sum": {"$ifNull": ["$fee", 0]}},
                 "deals": {"$sum": 1},
             }
@@ -77,11 +67,12 @@ async def admin_summary(admin_id: int) -> Dict[str, Any]:
         return {"admin_id": int(admin_id), "admin_name": None, "total": 0.0, "deals": 0, "legacy": 0}
     return {
         "admin_id": int(admin_id),
-        "admin_name": doc["_id"].get("admin_name"),
+        "admin_name": doc.get("admin_name"),
         "total": float(doc.get("total", 0.0)),
         "deals": int(doc.get("deals", 0)),
         "legacy": 0,
     }
+
 
 
 async def grand_totals() -> Dict[str, Any]:

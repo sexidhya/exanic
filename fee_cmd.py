@@ -128,9 +128,8 @@ def register(client):
             name = r.get("admin_name") or str(r.get("admin_id"))
             uid = r.get("admin_id")
             total = float(r.get("total", 0.0))
-            deals = int(r.get("deals", 0))
-            legacy = int(r.get("legacy", 0))  # always 0 per request
-            lines.append(f"{name} ({uid}) — ${total:.2f} • {deals} deals • legacy={legacy}")
+            deals = int(r.get("deals", 0)) 
+            lines.append(f"{name} ({uid}) → ${total:.2f}")
         await event.respond("\n".join(lines))
 
 
@@ -142,4 +141,4 @@ def register(client):
         if not await is_owner(event.sender_id):
             return await event.respond("❌ Owner-only command.")
         gt = await fees_backend.grand_totals()
-        await event.respond(f"📊 {gt['count']} fee records • Sum: ${gt['sum']:.2f} • legacy_sum: {gt['legacy_sum']}")
+        await event.respond(f"📊 {gt['count']} fee records • Sum: ${gt['sum']:.2f}")
