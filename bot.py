@@ -128,7 +128,7 @@ async def escrowers_cmd(event):
     for e in escrowers:
         disp = e.get("display_name") or str(e.get("user_id"))
         limit = e.get("limit", 0)
-        lines.append(f"• {disp} ({e.get('user_id')}) — limit: {int(limit) if float(limit).is_integer() else limit}$")
+        lines.append(f"• {disp} ({e.get('user_id')}) • Limit → {int(limit) if float(limit).is_integer() else limit}$")
     await event.respond("\n".join(lines))
 
 @client.on(events.NewMessage(pattern=r"^/admin\s+(\d+)\s+(\d+(?:\.\d+)?)$"))
