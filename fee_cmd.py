@@ -65,16 +65,30 @@ def register(client):
     # ----------------------------
     @client.on(events.NewMessage(pattern=r"^/myfees$"))
     async def myfees_cmd(event):
+        # Only escrowers can use this
         if not await is_escrower(event.sender_id):
             return await event.respond("❌ Only escrowers can use this command.")
+
         uid = int(event.sender_id)
+        sender = await event.get_sender()
+        sender_name = sender.first_name or sender.username or str(uid)
+
+        # Fetch all fees for this escrower
         rows = await list_fees_by_admin(uid)
         if not rows:
-            return await event.respond("You have no recorded fees yet.")
-        lines = [f"💼 Fees for {uid}:"]
+            return await event.respond(f"💼 {sender_name}, you have no recorded fees yet.")
+
+        total_fee = sum(float(d.get("fee", 0)) for d in rows)
+        lines = [f"💼 **Fees for {sender_name}** • Total → ${total_fee:.2f}\n"]
+
+        # List all individual records
         for d in rows:
-            lines.append(f"{d.get('_id')} — {d.get('name','')} — ${float(d.get('fee',0)):.2f}")
+            deal_label = d.get("name", "Unnamed Deal")
+            fee_value = float(d.get("fee", 0))
+            lines.append(f"• {deal_label} — ${fee_value:.2f}")
+
         await event.respond("\n".join(lines))
+
 
 
     # ----------------------------
