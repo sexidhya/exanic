@@ -2,6 +2,8 @@ from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import User
 from db import COL_DEALS
+from permissions import is_owner, is_escrower, is_admin_or_owner
+
 
 async def _resolve_user(client, arg: str, fallback_sender):
     """
