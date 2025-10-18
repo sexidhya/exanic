@@ -6,10 +6,7 @@ from utils.format import compact_usd
 
 from config import FOOTER_INFO_DATE
 
-CONSIDERED_STATUSES = [
-    "pending", "active", "completed", "released",
-    "disputed", "cancelled", "shifted", "closed"
-]
+CONSIDERED_STATUSES = ["closed"]
 
 async def _user_deal_stats_current(db: AsyncIOMotorDatabase, user_id: int) -> Dict[str, Any]:
     """
